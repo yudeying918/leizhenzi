@@ -1,0 +1,4 @@
+#Thu Dec 22 22:26:55 CST 2022
+base.0=/Users/ydy/Desktop/FengquBra/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
