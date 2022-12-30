@@ -24,6 +24,10 @@
         "source": "/Users/ydy/Desktop/FengquBra/android/app/src/main/res/drawable-v21/launch_background.xml"
     },
     {
+        "merged": "/Users/ydy/Desktop/FengquBra/build/app/intermediates/merged_res/debug/mipmap-ldpi_ic_launcher.png.flat",
+        "source": "/Users/ydy/Desktop/FengquBra/android/app/src/main/res/mipmap-ldpi/ic_launcher.png"
+    },
+    {
         "merged": "/Users/ydy/Desktop/FengquBra/build/app/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.png.flat",
         "source": "/Users/ydy/Desktop/FengquBra/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     }

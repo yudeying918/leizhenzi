@@ -123,13 +123,14 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
     print(_device.name + ' is disconnected');
   }
 
-  Column listAllBleResults(){
-      List<Widget> containers = <Widget>[];
+  List<Widget> listAllBleResults(){
+      List<Widget> list = <Widget>[];
       for (BluetoothDevice device in widget.devicesList) {
-        containers.add(
-          SizedBox(
-            height: 50,
-            child: ListTile(
+        list.add(
+          // SizedBox(
+          //   height: 50,
+          //   child:
+           ListTile(
                         title: Text(device.name),
                         subtitle: Text(device.id.toString()),
                         trailing: StreamBuilder<BluetoothDeviceState>(
@@ -141,11 +142,11 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
                             switch (snapshot.data) {
                               case BluetoothDeviceState.connected:
                                 onPressed = () => disConnectDevice(device);
-                                text = 'DISCONNECT';
+                                text = '断开';
                                 break;
                               case BluetoothDeviceState.disconnected:
                                 onPressed = () => connectDevice(device);
-                                text = 'CONNECT';
+                                text = '连接';
                                 break;
                               default:
                                 onPressed = null;
@@ -164,15 +165,16 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
                           },
                         ),
                       )
-                ),
-            );
+                );
+            // );
       }
 
-      return Column(
-        children: <Widget>[
-          ...containers,
-        ],
-      );
+      // return ListView()
+      //   children: <Widget>[
+      //     ...containers,
+      //   ],
+    return list;
+      // );
     }
 
 
@@ -188,14 +190,24 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Find Devices'),
-        leading: IconButton(icon:Icon(Icons.arrow_back),
+        backgroundColor: Colors.white,
+        elevation: 0,
+        centerTitle: true,
+        title: const Text('设备连接',style: TextStyle(color: Colors.black),),
+        leading: IconButton(icon:Icon(Icons.arrow_back),color: Colors.black,
           onPressed: () {
             return Navigator.pop(context,true);
           },),
       ),
       body:
-          listAllBleResults(),
+          Container(
+            height: 300,
+            padding: EdgeInsets.all(10),
+            child: ListView(
+              children: listAllBleResults(),
+            ),
+          ),
+          // listAllBleResults(),
 
       floatingActionButton: StreamBuilder<bool>(
         stream: FlutterBluePlus.instance.isScanning,
