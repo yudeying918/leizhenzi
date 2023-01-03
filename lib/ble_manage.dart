@@ -77,6 +77,8 @@ class FindDevicesScreen extends StatefulWidget {
 
 class _FindDevicesScreenState extends State<FindDevicesScreen> {
 
+
+
   _addDeviceTolist(final BluetoothDevice device) {
     if (!widget.devicesList.contains(device) && device.name.contains('FQ')) {
       setState(() {
@@ -86,6 +88,8 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
   }
 
   getAllBleList(){
+
+
     widget.flutterBlue.startScan(timeout: const Duration(seconds: 3));
     widget.flutterBlue.connectedDevices
         .asStream()
@@ -102,7 +106,16 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
   }
 
   void connectDevice(BluetoothDevice _device) async {
+/*insure that there is only one connected device*/
     widget.flutterBlue.stopScan();
+    widget.flutterBlue.connectedDevices
+        .asStream()
+        .listen((List<BluetoothDevice> devices) {
+      for (BluetoothDevice device in devices) {
+        device.disconnect();
+      }
+    });
+
     try {
       await _device.connect();
     } on PlatformException catch (e) {
@@ -142,7 +155,7 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
                             switch (snapshot.data) {
                               case BluetoothDeviceState.connected:
                                 onPressed = () => disConnectDevice(device);
-                                text = '断开';
+                                text = '断开连接';
                                 break;
                               case BluetoothDeviceState.disconnected:
                                 onPressed = () => connectDevice(device);
@@ -160,7 +173,7 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
                                   style: Theme.of(context)
                                       .primaryTextTheme
                                       .button
-                                      ?.copyWith(color: Colors.blue),
+                                      ?.copyWith(color: Colors.pinkAccent),
                                 ));
                           },
                         ),
@@ -188,28 +201,90 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
 
   @override
   Widget build(BuildContext context) {
+    print('ble page build');
+
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        centerTitle: true,
-        title: const Text('设备连接',style: TextStyle(color: Colors.black),),
-        leading: IconButton(icon:Icon(Icons.arrow_back),color: Colors.black,
-          onPressed: () {
-            return Navigator.pop(context,true);
-          },),
-      ),
-      body:
-          Container(
-            height: 300,
-            padding: EdgeInsets.all(10),
-            child: ListView(
-              children: listAllBleResults(),
-            ),
+          appBar: AppBar(
+            backgroundColor: Colors.white,
+            elevation: 0,
+            centerTitle: true,
+            title: const Text('设备连接',style: TextStyle(color: Colors.black),),
+            leading: IconButton(icon:Icon(Icons.arrow_back),color: Colors.black,
+              onPressed: () {
+                return Navigator.pop(context,true);
+              },),
           ),
+          body:
+          Column(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                    border: Border.all(width: 1.0,color: Colors.black26),
+                    borderRadius: BorderRadius.all(Radius.circular(10.0))
+                ),
+                height: 400,
+                padding: EdgeInsets.only(top: 5.0,left: 5.0,right: 5.0),
+                margin: EdgeInsets.only(left: 10.0,right: 10.0),
+                child: ListView(
+                  children: listAllBleResults(),
+                ),
+              ),
+              Container(
+                height: 50,
+                margin: EdgeInsets.symmetric(vertical: 30.0,horizontal: 10.0),
+                // padding: EdgeInsets.all(10),
+                child: StreamBuilder<bool>(
+                  stream: FlutterBluePlus.instance.isScanning,
+                  initialData: false,
+                  builder: (c,snapshot){
+                    if(snapshot.data!){
+                      return OutlinedButton(
+                          style: OutlinedButton.styleFrom(
+                            foregroundColor: Colors.pinkAccent,
+                            backgroundColor: Colors.white,
+                            side: BorderSide(color: Colors.pinkAccent, width: 1),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(30.0))
+                            ),
+                            padding: EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 10.0),
+                            // padding: EdgeInsets.symmetric(vertical: 5.0,horizontal: 10.0),
+                          ),
+                          onPressed: () =>FlutterBluePlus.instance.stopScan(),
+                          child:
+                          Text('停止扫描',
+                              style: TextStyle(
+                                fontSize: 15.0,))
+                      );
+                    }else{
+                      return OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                      foregroundColor: Colors.black,
+                      backgroundColor: Colors.white,
+                      side: BorderSide(color: Colors.pinkAccent, width: 1),
+                      shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(30.0))
+                      ),
+                      padding: EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 10.0),
+                      // padding: EdgeInsets.symmetric(vertical: 5.0,horizontal: 10.0),
+                      ),
+                      onPressed: () { getAllBleList(); },
+                      child:
+                      Text('重新扫描',
+                      style: TextStyle(
+                    fontSize: 15.0,))
+                    );
+                    }
+                  },
+                )
+              )
+            ],
+          ),
+
+
           // listAllBleResults(),
 
-      floatingActionButton: StreamBuilder<bool>(
+          /*floatingActionButton: StreamBuilder<bool>(
         stream: FlutterBluePlus.instance.isScanning,
         initialData: false,
         builder: (c, snapshot) {
@@ -227,8 +302,8 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
             );    // .startScan(timeout: const Duration(seconds: 4)));
           }
         },
-      ),
-    );
+      ),*/
+        );
   }
 
 
