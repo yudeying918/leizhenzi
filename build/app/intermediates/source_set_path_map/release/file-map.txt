@@ -1,0 +1,14 @@
+com.jsfengqu.smartbra.app-jetified-annotation-experimental-1.1.0-0 C:\Users\Administrator\.gradle\caches\transforms-3\203debc3fca0502984fa62fae6994c46\transformed\jetified-annotation-experimental-1.1.0\res
+com.jsfengqu.smartbra.app-core-1.6.0-1 C:\Users\Administrator\.gradle\caches\transforms-3\479dd4bb6612b7cfbdde7fd13a3daa5e\transformed\core-1.6.0\res
+com.jsfengqu.smartbra.app-jetified-window-1.0.0-beta04-2 C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\res
+com.jsfengqu.smartbra.app-jetified-window-java-1.0.0-beta04-3 C:\Users\Administrator\.gradle\caches\transforms-3\f01d600dad128af9f0fc5b3f69f1ac4b\transformed\jetified-window-java-1.0.0-beta04\res
+com.jsfengqu.smartbra.app-main-4 D:\FengquBra\android\app\src\main\res
+com.jsfengqu.smartbra.app-release-5 D:\FengquBra\android\app\src\release\res
+com.jsfengqu.smartbra.app-pngs-6 D:\FengquBra\build\app\generated\res\pngs\release
+com.jsfengqu.smartbra.app-resValues-7 D:\FengquBra\build\app\generated\res\resValues\release
+com.jsfengqu.smartbra.app-rs-8 D:\FengquBra\build\app\generated\res\rs\release
+com.jsfengqu.smartbra.app-mergeReleaseResources-9 D:\FengquBra\build\app\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.jsfengqu.smartbra.app-mergeReleaseResources-10 D:\FengquBra\build\app\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.jsfengqu.smartbra.app-merged_res-11 D:\FengquBra\build\app\intermediates\merged_res\release
+com.jsfengqu.smartbra.app-packaged_res-12 D:\FengquBra\build\flutter_blue_plus\intermediates\packaged_res\release
+com.jsfengqu.smartbra.app-packaged_res-13 D:\FengquBra\build\fluttertoast\intermediates\packaged_res\release

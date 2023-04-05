@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/ydy/Desktop/FengquBra/build/fluttertoast/intermediates/merged_res/release/values-lo/values-lo.xml",
+            "outputFile": "io.github.ponnamkarthik.toast.fluttertoast-merged_res-10:/values-lo/values-lo.xml",
             "map": [
                 {
-                    "source": "/Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/res/values-lo/values-lo.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-3\\479dd4bb6612b7cfbdde7fd13a3daa5e\\transformed\\core-1.6.0\\res\\values-lo\\values-lo.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "/Users/ydy/Desktop/FengquBra/build/fluttertoast/intermediates/incremental/mergeReleaseResources/merged.dir/values-lo/values-lo.xml",
+            "outputFile": "io.github.ponnamkarthik.toast.fluttertoast-mergeReleaseResources-8:/values-lo/values-lo.xml",
             "map": [
                 {
-                    "source": "/Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/res/values-lo/values-lo.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-3\\479dd4bb6612b7cfbdde7fd13a3daa5e\\transformed\\core-1.6.0\\res\\values-lo\\values-lo.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

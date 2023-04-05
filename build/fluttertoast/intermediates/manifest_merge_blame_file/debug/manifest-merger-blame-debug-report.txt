@@ -2,10 +2,7 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="io.github.ponnamkarthik.toast.fluttertoast" >
 4
-5    <uses-sdk
-6        android:minSdkVersion="16"
-6-->/Applications/flutter/.pub-cache/hosted/pub.flutter-io.cn/fluttertoast-8.1.2/android/src/main/AndroidManifest.xml
-7        android:targetSdkVersion="16" />
-7-->/Applications/flutter/.pub-cache/hosted/pub.flutter-io.cn/fluttertoast-8.1.2/android/src/main/AndroidManifest.xml
-8
-9</manifest>
+5    <uses-sdk android:minSdkVersion="16" />
+5-->C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\fluttertoast-8.1.3\android\src\main\AndroidManifest.xml
+6
+7</manifest>

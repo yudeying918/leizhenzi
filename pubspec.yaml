@@ -5,6 +5,8 @@ description: Demonstrates how to use the flutter_blue_plus plugin.
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none'
 
+version: 1.0.2+1
+
 environment:
   sdk: ">=2.15.1 <3.0.0"
 
@@ -22,12 +24,13 @@ dependencies:
 #    path: ../
 
   cupertino_icons: ^1.0.2
+  permission_handler: ^10.2.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^1.0.4
+  flutter_lints: ^2.0.1
 
 flutter:
   uses-material-design: true

@@ -5,21 +5,23 @@ import 'dart:async';
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'common/global.dart';
-import 'ble_manage.dart';
+// import 'ble_manage.dart';
+import 'ble_3.dart';
+
 
 enum WarmGear { high, middle, low }
 
-enum WarmTime { half, one, two, three, four }
+enum WarmTime { one, five, ten }
 
-enum WarmTimePeriod { one, three, five }
+/*enum WarmTimePeriod { one, three, five }
 
-enum WarmPauseTime { ten, twenty, thirty }
+enum WarmPauseTime { ten, twenty, thirty }*/
 
-enum MassageMode { zero, one, two, three, four, five }
+enum MassageMode { zero, one, two }
 
 enum MassageTime { quarter, half, one }
 
-enum MassageStrength { one, two, three }
+enum MassageStrength { high, middle, low }
 
 void main() {
   runApp(MyApp());
@@ -53,14 +55,17 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   _getRequests() async {
     print('这里进行操作');
+    print('bleInstance.connectedDevices is ' + bleInstance.connectedDevices.toString());
     // setState(() {
     //   connectedDeviceNameText=Global.connectedDevice.name;
     // });
+
     bleInstance.connectedDevices.then((connectedDevices) {
       if (connectedDevices.isEmpty) {
         print('no connected device');
         setState(() {
           connectedDeviceNameText = '未连接设备';
+          _isToFindPageHide=false;
           _isBatteryHide = true;
           _isChargeHide = true;
           Global.isConnected = false;
@@ -73,26 +78,22 @@ class _MyHomePageState extends State<MyHomePage> {
 
   FlutterBluePlus bleInstance = FlutterBluePlus.instance;
   String connectedDeviceNameText = '未连接设备';
-  var warmGearChoice = '高温';
+  var warmGearChoice = '高';
   var warmTimeChoice = '1小时';
-
-  // var warmTimePeriodChoice = '1分钟';
-  // var warmPauseTimeChoice = '10秒';
-  // var warmOnOffButtonText = '开始加热';
-  var isWarming = false;
   var warmGearNum = 0x64;
-  var warmTimeNum = 0x3c;
+  var warmTimeHighNum = 0x00;
+  var warmTimeLowNum = 0x3C;
+  var isWarming = false;
 
   var massageModeChoice = '持续';
-  var massageTimeChoice = '30分钟';
+  var massageTimeChoice = '15分钟';
   var massageStrengthChoice = '低';
   var massageModeNum = 0x00;
-  var massageTimeNum = 0x0F;
+  var massageTimeHighNum = 0x00;
+  var massageTimeLowNum = 0x0F;
   var massageStrengthNum = 0x32;
   var isMassaging = false;
 
-  // var warmPeriodTimeNum = 0x01;
-  // var warmPauseTimeNum = 0x0a;
   late BluetoothCharacteristic connectedDeviceChar;
   DateTime? _lastQuitTime;
   String batteryImageLink = 'images/battery-4.png';
@@ -101,12 +102,12 @@ class _MyHomePageState extends State<MyHomePage> {
   bool _isBatteryHide = true;
   bool _isWarmGifShow = false;
   bool _isMassageGifShow = false;
-
+  bool _isToFindPageHide = false;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    print('inistate');
+    print('inistate home page');
     // if (Global.isConnected == false)  {
     //   print('no connected device');
     // } else {
@@ -141,11 +142,12 @@ class _MyHomePageState extends State<MyHomePage> {
           }
         },
         child: Scaffold(
+            backgroundColor: Colors.white,
             appBar: AppBar(
               backgroundColor: Colors.white,
               elevation: 0,
               title: const Text(
-                '沣趣智能文胸',
+                '沣趣理疗文胸',
                 style: TextStyle(color: Colors.black),
               ),
               centerTitle: true,
@@ -159,126 +161,143 @@ class _MyHomePageState extends State<MyHomePage> {
                       // Navigator.pushNamed(context, "/ble");
                       Navigator.of(context)
                           .push(
-                            MaterialPageRoute(
-                                builder: (_) => FindDevicesScreen()),
-                          )
-                          // .then((val) => val ? _getRequests() : null);
-                          .then((val) =>  _getRequests() );
+                        MaterialPageRoute(
+                            builder: (_) => FindDevicesScreen()),
+                      )
+                      // .then((val) => val ? _getRequests() : null);
+                          .then((val) => _getRequests());
                     }),
               ],
             ),
             body: SingleChildScrollView(
                 child: Column(children: [
-              /*battery situation display*/
-              Container(
-                margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
-                height: 40,
-                decoration: BoxDecoration(
-                    border: Border.all(width: 1.0, color: Colors.black12),
-                    //   color: Colors.black26,
-                    borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                child: Row(
-                  children: [
-                    SizedBox(
-                      width: 30,
+                  /*battery situation display*/
+                  Container(
+                    margin: const EdgeInsets.only(top: 5, left: 10, right: 10),
+                    height: 40,
+                    decoration: BoxDecoration(
+                        border: Border.all(width: 1.0, color: Colors.black12),
+                        //   color: Colors.black26,
+                        borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Expanded(
+                          child: Text(connectedDeviceNameText),
+                        ),
+                        Offstage(
+                          offstage: _isToFindPageHide,
+                          child: TextButton(
+                              onPressed: () => {
+                                Navigator.of(context)
+                                    .push(
+                                  MaterialPageRoute(
+                                      builder: (_) => FindDevicesScreen()),
+                                )
+                                // .then((val) => val ? _getRequests() : null);
+                                    .then((val) => _getRequests())
+                              },
+                              child: Text('搜索设备',
+                                  style: TextStyle(
+                                    color: Colors.pinkAccent,
+                                    fontSize: 15.0,
+                                  ))),
+                        ),
+                        Offstage(
+                          offstage: _isChargeHide,
+                          child: Image.asset(
+                            'images/battery-charging.png',
+                            width: 30,
+                          ),
+                        ),
+                        Offstage(
+                          offstage: _isBatteryHide,
+                          child: Image.asset(
+                            batteryImageLink,
+                            width: 30,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        )
+                      ],
                     ),
-                    Expanded(
-                      child: Text(connectedDeviceNameText),
-                    ),
-                    // Icon(Icons.battery_0_bar)
-                    Offstage(
-                      offstage: _isChargeHide,
-                      child: Image.asset(
-                        'images/battery-charging.png',
-                        width: 30,
-                      ),
-                    ),
-                    Offstage(
-                      offstage: _isBatteryHide,
-                      child: Image.asset(
-                        batteryImageLink,
-                        width: 30,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    )
-                  ],
-                ),
-              ),
-              /*warm control widget*/
-              Container(
-                child: Column(
-                  children: [
-                    //warm gear widget
-                    Container(
-                        margin:
-                            const EdgeInsets.only(top: 10, left: 10, right: 10),
-                        height: 50,
-                        decoration: BoxDecoration(
-                            border:
+                  ),
+                  /*warm control widget*/
+                  Container(
+                    child: Column(
+                      children: [
+                        //warm gear widget
+                        Container(
+                            margin:
+                            const EdgeInsets.only(top: 8, left: 10, right: 10),
+                            height: 50,
+                            decoration: BoxDecoration(
+                                border:
                                 Border.all(width: 1.0, color: Colors.black26),
-                            // color: Colors.amber,
-                            borderRadius:
+                                // color: Colors.amber,
+                                borderRadius:
                                 BorderRadius.all(Radius.circular(10.0))),
-                        child: Row(
-                          children: [
-                            const SizedBox(
-                              width: 30,
-                            ),
-                            Expanded(child: Text('加热档位')),
-                            TextButton(
-                                onPressed: () => warmGearDialog(context),
-                                child: Text(warmGearChoice,
-                                    style: TextStyle(
-                                      color: Colors.pinkAccent,
-                                      fontSize: 15.0,
-                                    ))),
-                            // Icon(Icons.arrow_right),
-                            // Image.asset('images/arrow_right.png'),
-                            IconButton(
-                                onPressed: () => warmGearDialog(context),
-                                icon: Image.asset(
-                                  'images/arrow_right.png',
-                                  width: 10,
-                                ))
-                          ],
-                        )),
-                    //warm time widget
-                    Container(
-                        margin:
-                            const EdgeInsets.only(top: 10, left: 10, right: 10),
-                        height: 50,
-                        decoration: BoxDecoration(
-                            border:
+                            child: Row(
+                              children: [
+                                const SizedBox(
+                                  width: 20,
+                                ),
+                                Expanded(child: Text('加热档位')),
+                                TextButton(
+                                    onPressed: () => warmGearDialog(context),
+                                    child: Text(warmGearChoice,
+                                        style: TextStyle(
+                                          color: Colors.pinkAccent,
+                                          fontSize: 15.0,
+                                        ))),
+                                // Icon(Icons.arrow_right),
+                                // Image.asset('images/arrow_right.png'),
+                                IconButton(
+                                    onPressed: () => warmGearDialog(context),
+                                    icon: Image.asset(
+                                      'images/arrow_right.png',
+                                      width: 10,
+                                    ))
+                              ],
+                            )),
+                        //warm time widget
+                        Container(
+                            margin:
+                            const EdgeInsets.only(top: 8, left: 10, right: 10),
+                            height: 50,
+                            decoration: BoxDecoration(
+                                border:
                                 Border.all(width: 1.0, color: Colors.black26),
-                            // color: Colors.amber,
-                            borderRadius:
+                                // color: Colors.amber,
+                                borderRadius:
                                 BorderRadius.all(Radius.circular(10.0))),
-                        child: Row(
-                          children: [
-                            const SizedBox(
-                              width: 30,
-                            ),
-                            Expanded(child: Text('加热时间')),
-                            TextButton(
-                                onPressed: () => warmTimeDialog(context),
-                                child: Text(warmTimeChoice,
-                                    style: TextStyle(
-                                      color: Colors.pinkAccent,
-                                      fontSize: 15.0,
-                                    ))),
-                            // Icon(Icons.arrow_right)
-                            IconButton(
-                                onPressed: () => warmTimeDialog(context),
-                                icon: Image.asset(
-                                  'images/arrow_right.png',
-                                  width: 10,
-                                ))
-                          ],
-                        )),
-                    //warm period time & warm pause time widget
-                    /*Container(
+                            child: Row(
+                              children: [
+                                const SizedBox(
+                                  width: 20,
+                                ),
+                                Expanded(child: Text('加热时间')),
+                                TextButton(
+                                    onPressed: () => warmTimeDialog(context),
+                                    child: Text(warmTimeChoice,
+                                        style: TextStyle(
+                                          color: Colors.pinkAccent,
+                                          fontSize: 15.0,
+                                        ))),
+                                // Icon(Icons.arrow_right)
+                                IconButton(
+                                    onPressed: () => warmTimeDialog(context),
+                                    icon: Image.asset(
+                                      'images/arrow_right.png',
+                                      width: 10,
+                                    ))
+                              ],
+                            )),
+                        //warm period time & warm pause time widget
+                        /*Container(
                         margin: const EdgeInsets.symmetric(vertical: 10),
                         height: 45,
                         color: Colors.lightGreen,
@@ -301,247 +320,248 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(width: 20,),
                           ],
                         )),*/
-                    /*warm animation*/
-                    Container(
-                      height: 80,
-                      margin: const EdgeInsets.only(left: 10, right: 10),
-                      child: Visibility(
-                        child: Image.asset('images/heating_low_active.gif'),
-                        visible: _isWarmGifShow,
-                        replacement: Image.asset('images/heating_low.png'),
-                        // maintainState: true,
-                        // maintainAnimation: true,
-                        maintainSize: false,
-                      ),
-                    ),
+                        /*warm animation*/
+                        Container(
+                          height: 80,
+                          margin: const EdgeInsets.only(left: 10, right: 10),
+                          child: Visibility(
+                            child: Image.asset('images/heating_low_active.gif'),
+                            visible: _isWarmGifShow,
+                            replacement: Image.asset('images/heating_low.png'),
+                            // maintainState: true,
+                            // maintainAnimation: true,
+                            maintainSize: false,
+                          ),
+                        ),
 
-                    //start&stop warm Button
-                    Container(
-                        margin:
+                        //start&stop warm Button
+                        Container(
+                            margin:
                             const EdgeInsets.only(top: 5, left: 10, right: 10),
-                        height: 50,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            OutlinedButton(
-                                style: OutlinedButton.styleFrom(
-                                  foregroundColor: Colors.black,
-                                  backgroundColor: Colors.white,
-                                  side: BorderSide(
-                                      color: Colors.pinkAccent, width: 1),
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.horizontal(
-                                          left: Radius.circular(30.0),
-                                          right: Radius.circular(0.0))),
-                                  padding: EdgeInsets.fromLTRB(
-                                      20.0, 10.0, 20.0, 10.0),
-                                ),
-                                onPressed: () => startWarmDataSend(),
-                                child: Text('开始加热',
-                                    style: TextStyle(
-                                      fontSize: 15.0,
-                                    ))),
-                            // SizedBox(width: 30,),
-                            OutlinedButton(
-                                style: OutlinedButton.styleFrom(
-                                  foregroundColor: Colors.black,
-                                  backgroundColor: Colors.white,
-                                  side: BorderSide(
-                                      color: Colors.pinkAccent, width: 1),
-                                  shape: RoundedRectangleBorder(
-                                      // borderRadius: BorderRadius.all(Radius.circular(10))
-                                      borderRadius: BorderRadius.horizontal(
-                                          left: Radius.circular(0.0),
-                                          right: Radius.circular(30.0))),
-                                  padding: EdgeInsets.fromLTRB(
-                                      20.0, 10.0, 20.0, 10.0),
-                                ),
-                                onPressed: () => stopWarmDataSend(),
-                                child: Text('停止加热',
-                                    style: TextStyle(
-                                      fontSize: 15.0,
-                                    ))),
-                          ],
-                        ))
-                  ],
-                ),
-              ),
-
-              /*massage control widget*/
-              Container(
-                child: Column(
-                  children: [
-                    /*massage mode widget*/
-                    Container(
-                        margin:
-                            const EdgeInsets.only(top: 10, left: 10, right: 10),
-                        height: 50,
-                        decoration: BoxDecoration(
-                            border:
-                                Border.all(width: 1.0, color: Colors.black26),
-                            // color: Colors.amber,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10.0))),
-                        child: Row(
-                          children: [
-                            const SizedBox(
-                              width: 30,
-                            ),
-                            Expanded(child: Text('按摩模式')),
-                            TextButton(
-                                onPressed: () => massageModeDialog(context),
-                                child: Text(massageModeChoice,
-                                    style: TextStyle(
-                                      color: Colors.pinkAccent,
-                                      fontSize: 15.0,
-                                    ))),
-                            // Icon(Icons.arrow_right)
-                            IconButton(
-                                onPressed: () => massageModeDialog(context),
-                                icon: Image.asset(
-                                  'images/arrow_right.png',
-                                  width: 10,
-                                ))
-                          ],
-                        )),
-                    /*massage time widget*/
-                    Container(
-                        margin:
-                            const EdgeInsets.only(top: 10, left: 10, right: 10),
-                        height: 50,
-                        decoration: BoxDecoration(
-                            border:
-                                Border.all(width: 1.0, color: Colors.black26),
-                            // color: Colors.amber,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10.0))),
-                        child: Row(
-                          children: [
-                            const SizedBox(
-                              width: 30,
-                            ),
-                            Expanded(child: Text('按摩时间')),
-                            TextButton(
-                                onPressed: () => massageTimeDialog(context),
-                                child: Text(massageTimeChoice,
-                                    style: TextStyle(
-                                      color: Colors.pinkAccent,
-                                      fontSize: 15.0,
-                                    ))),
-                            // Icon(Icons.arrow_right)
-                            IconButton(
-                                onPressed: () => massageTimeDialog(context),
-                                icon: Image.asset(
-                                  'images/arrow_right.png',
-                                  width: 10,
-                                ))
-                          ],
-                        )),
-                    /*massage strength widget*/
-                    Container(
-                        margin:
-                            const EdgeInsets.only(top: 10, left: 10, right: 10),
-                        height: 50,
-                        decoration: BoxDecoration(
-                            border:
-                                Border.all(width: 1.0, color: Colors.black26),
-                            // color: Colors.amber,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10.0))),
-                        child: Row(
-                          children: [
-                            const SizedBox(
-                              width: 30,
-                            ),
-                            Expanded(child: Text('按摩强度')),
-                            TextButton(
-                                onPressed: () => massageStrengthDialog(context),
-                                child: Text(massageStrengthChoice,
-                                    style: TextStyle(
-                                      color: Colors.pinkAccent,
-                                      fontSize: 15.0,
-                                    ))),
-                            // Icon(Icons.arrow_right)
-                            IconButton(
-                                onPressed: () => massageStrengthDialog(context),
-                                icon: Image.asset(
-                                  'images/arrow_right.png',
-                                  width: 10,
-                                ))
-                          ],
-                        )),
-
-                    /*massage animation*/
-                    Container(
-                      height: 70,
-                      margin:
-                          const EdgeInsets.only(top: 10.0, left: 10, right: 10),
-                      child: Visibility(
-                        child: Image.asset(
-                          'images/massage_active.gif',
-                          width: 90.0,
-                        ),
-                        visible: _isMassageGifShow,
-                        replacement: Image.asset(
-                          'images/massage_0.png',
-                          width: 90.0,
-                        ),
-                        // maintainState: true,
-                        // maintainAnimation: true,
-                        maintainSize: false,
-                      ),
+                            height: 50,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                OutlinedButton(
+                                    style: OutlinedButton.styleFrom(
+                                      foregroundColor: Colors.black,
+                                      backgroundColor: Colors.white,
+                                      side: BorderSide(
+                                          color: Colors.pinkAccent, width: 1),
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.horizontal(
+                                              left: Radius.circular(30.0),
+                                              right: Radius.circular(0.0))),
+                                      padding: EdgeInsets.fromLTRB(
+                                          30.0, 10.0, 30.0, 10.0),
+                                    ),
+                                    onPressed: () => startWarmDataSend(),
+                                    child: Text('开始加热',
+                                        style: TextStyle(
+                                          fontSize: 15.0,
+                                        ))),
+                                // SizedBox(width: 30,),
+                                OutlinedButton(
+                                    style: OutlinedButton.styleFrom(
+                                      foregroundColor: Colors.black,
+                                      backgroundColor: Colors.white,
+                                      side: BorderSide(
+                                          color: Colors.pinkAccent, width: 1),
+                                      shape: RoundedRectangleBorder(
+                                        // borderRadius: BorderRadius.all(Radius.circular(10))
+                                          borderRadius: BorderRadius.horizontal(
+                                              left: Radius.circular(0.0),
+                                              right: Radius.circular(30.0))),
+                                      padding: EdgeInsets.fromLTRB(
+                                          30.0, 10.0, 30.0, 10.0),
+                                    ),
+                                    onPressed: () => stopWarmDataSend(),
+                                    child: Text('停止加热',
+                                        style: TextStyle(
+                                          fontSize: 15.0,
+                                        ))),
+                              ],
+                            ))
+                      ],
                     ),
+                  ),
 
-                    //start&stop warm Button
-                    Container(
-                        margin: const EdgeInsets.symmetric(vertical: 5),
-                        height: 45,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            OutlinedButton(
-                                style: OutlinedButton.styleFrom(
-                                  foregroundColor: Colors.black,
-                                  backgroundColor: Colors.white,
-                                  side: BorderSide(
-                                      color: Colors.pinkAccent, width: 1),
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.horizontal(
-                                          left: Radius.circular(30.0),
-                                          right: Radius.circular(0.0))),
-                                  padding: EdgeInsets.fromLTRB(
-                                      20.0, 10.0, 20.0, 10.0),
+                  /*massage control widget*/
+                  Container(
+                    child: Column(
+                      children: [
+                        /*massage mode widget*/
+                        Container(
+                            margin:
+                            const EdgeInsets.only(top: 10, left: 10, right: 10),
+                            height: 50,
+                            decoration: BoxDecoration(
+                                border:
+                                Border.all(width: 1.0, color: Colors.black26),
+                                // color: Colors.amber,
+                                borderRadius:
+                                BorderRadius.all(Radius.circular(10.0))),
+                            child: Row(
+                              children: [
+                                const SizedBox(
+                                  width: 20,
                                 ),
-                                onPressed: () => startMassageDataSend(),
-                                child: Text('开始按摩',
-                                    style: TextStyle(
-                                      fontSize: 15.0,
-                                    ))),
-                            OutlinedButton(
-                                style: OutlinedButton.styleFrom(
-                                  foregroundColor: Colors.black,
-                                  backgroundColor: Colors.white,
-                                  side: BorderSide(
-                                      color: Colors.pinkAccent, width: 1),
-                                  shape: RoundedRectangleBorder(
-                                      // borderRadius: BorderRadius.all(Radius.circular(10))
-                                      borderRadius: BorderRadius.horizontal(
-                                          left: Radius.circular(0.0),
-                                          right: Radius.circular(30.0))),
-                                  padding: EdgeInsets.fromLTRB(
-                                      20.0, 10.0, 20.0, 10.0),
+                                Expanded(child: Text('按摩模式')),
+                                TextButton(
+                                    onPressed: () => massageModeDialog(context),
+                                    child: Text(massageModeChoice,
+                                        style: TextStyle(
+                                          color: Colors.pinkAccent,
+                                          fontSize: 15.0,
+                                        ))),
+                                // Icon(Icons.arrow_right)
+                                IconButton(
+                                    onPressed: () => massageModeDialog(context),
+                                    icon: Image.asset(
+                                      'images/arrow_right.png',
+                                      width: 10,
+                                    ))
+                              ],
+                            )),
+                        /*massage time widget*/
+                        Container(
+                            margin:
+                            const EdgeInsets.only(top: 8, left: 10, right: 10),
+                            height: 50,
+                            decoration: BoxDecoration(
+                                border:
+                                Border.all(width: 1.0, color: Colors.black26),
+                                // color: Colors.amber,
+                                borderRadius:
+                                BorderRadius.all(Radius.circular(10.0))),
+                            child: Row(
+                              children: [
+                                const SizedBox(
+                                  width: 20,
                                 ),
-                                onPressed: () => stopMassageDataSend(),
-                                child: Text('停止按摩',
-                                    style: TextStyle(
-                                      fontSize: 15.0,
-                                    ))),
-                          ],
-                        ))
-                  ],
-                ),
-              ),
-            ]))));
+                                Expanded(child: Text('按摩时间')),
+                                TextButton(
+                                    onPressed: () => massageTimeDialog(context),
+                                    child: Text(massageTimeChoice,
+                                        style: TextStyle(
+                                          color: Colors.pinkAccent,
+                                          fontSize: 15.0,
+                                        ))),
+                                // Icon(Icons.arrow_right)
+                                IconButton(
+                                    onPressed: () => massageTimeDialog(context),
+                                    icon: Image.asset(
+                                      'images/arrow_right.png',
+                                      width: 10,
+                                    ))
+                              ],
+                            )),
+                        /*massage strength widget*/
+                        Container(
+                            margin:
+                            const EdgeInsets.only(top: 8, left: 10, right: 10),
+                            height: 50,
+                            decoration: BoxDecoration(
+                                border:
+                                Border.all(width: 1.0, color: Colors.black26),
+                                // color: Colors.amber,
+                                borderRadius:
+                                BorderRadius.all(Radius.circular(10.0))),
+                            child: Row(
+                              children: [
+                                const SizedBox(
+                                  width: 20,
+                                ),
+                                Expanded(child: Text('按摩强度')),
+                                TextButton(
+                                    onPressed: () => massageStrengthDialog(context),
+                                    child: Text(massageStrengthChoice,
+                                        style: TextStyle(
+                                          color: Colors.pinkAccent,
+                                          fontSize: 15.0,
+                                        ))),
+                                // Icon(Icons.arrow_right)
+                                IconButton(
+                                    onPressed: () => massageStrengthDialog(context),
+                                    icon: Image.asset(
+                                      'images/arrow_right.png',
+                                      width: 10,
+                                    ))
+                              ],
+                            )),
+
+                        /*massage animation*/
+                        Container(
+                          height: 80,
+                          margin:
+                          const EdgeInsets.only(top: 5.0, left: 10, right: 10),
+                          child: Visibility(
+                            child: Image.asset(
+                              'images/massage_active.gif',
+                              width: 100.0,
+                            ),
+                            visible: _isMassageGifShow,
+                            replacement: Image.asset(
+                              'images/massage_0.png',
+                              width: 100.0,
+                            ),
+                            // maintainState: true,
+                            // maintainAnimation: true,
+                            maintainSize: false,
+                          ),
+                        ),
+
+                        //start&stop warm Button
+                        Container(
+                            margin:
+                            const EdgeInsets.only(top: 5, left: 10, right: 10),
+                            height: 50,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                OutlinedButton(
+                                    style: OutlinedButton.styleFrom(
+                                      foregroundColor: Colors.black,
+                                      backgroundColor: Colors.white,
+                                      side: BorderSide(
+                                          color: Colors.pinkAccent, width: 1),
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.horizontal(
+                                              left: Radius.circular(30.0),
+                                              right: Radius.circular(0.0))),
+                                      padding: EdgeInsets.fromLTRB(
+                                          30.0, 10.0, 30.0, 10.0),
+                                    ),
+                                    onPressed: () => startMassageDataSend(),
+                                    child: Text('开始按摩',
+                                        style: TextStyle(
+                                          fontSize: 15.0,
+                                        ))),
+                                OutlinedButton(
+                                    style: OutlinedButton.styleFrom(
+                                      foregroundColor: Colors.black,
+                                      backgroundColor: Colors.white,
+                                      side: BorderSide(
+                                          color: Colors.pinkAccent, width: 1),
+                                      shape: RoundedRectangleBorder(
+                                        // borderRadius: BorderRadius.all(Radius.circular(10))
+                                          borderRadius: BorderRadius.horizontal(
+                                              left: Radius.circular(0.0),
+                                              right: Radius.circular(30.0))),
+                                      padding: EdgeInsets.fromLTRB(
+                                          30.0, 10.0, 30.0, 10.0),
+                                    ),
+                                    onPressed: () => stopMassageDataSend(),
+                                    child: Text('停止按摩',
+                                        style: TextStyle(
+                                          fontSize: 15.0,
+                                        ))),
+                              ],
+                            ))
+                      ],
+                    ),
+                  ),
+                ]))));
   }
 
 //warm gear dialog--------------------------
@@ -553,19 +573,19 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('加热档位'),
           children: [
             SimpleDialogOption(
-              child: Text('高温'),
+              child: Text('高'),
               onPressed: () {
                 Navigator.pop(context, WarmGear.high);
               },
             ),
             SimpleDialogOption(
-              child: Text('中温'),
+              child: Text('中'),
               onPressed: () {
                 Navigator.pop(context, WarmGear.middle);
               },
             ),
             SimpleDialogOption(
-              child: Text('低温'),
+              child: Text('低'),
               onPressed: () {
                 Navigator.pop(context, WarmGear.low);
               },
@@ -578,25 +598,25 @@ class _MyHomePageState extends State<MyHomePage> {
     switch (warmGearOption) {
       case WarmGear.high:
         setState(() {
-          warmGearChoice = '高温';
+          warmGearChoice = '高';
         });
-        warmGearNum = 0x64;
+        warmGearNum = 0x55;
         break;
       case WarmGear.middle:
         setState(() {
-          warmGearChoice = '中温';
+          warmGearChoice = '中';
         });
-        warmGearNum = 0x4B;
+        warmGearNum = 0x46;
         break;
       case WarmGear.low:
         setState(() {
-          warmGearChoice = '低温';
+          warmGearChoice = '低';
         });
-        warmGearNum = 0x32;
+        warmGearNum = 0x37;
         break;
       default:
-        warmGearChoice = '中温';
-        warmGearNum = 0x4B;
+        warmGearChoice = '中';
+        warmGearNum = 0x46;
     }
   }
 
@@ -609,24 +629,24 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('加热时间'),
           children: [
             SimpleDialogOption(
-              child: Text('半小时'),
-              onPressed: () {
-                Navigator.pop(context, WarmTime.half);
-              },
-            ),
-            SimpleDialogOption(
               child: Text('1小时'),
               onPressed: () {
                 Navigator.pop(context, WarmTime.one);
               },
             ),
             SimpleDialogOption(
-              child: Text('2小时'),
+              child: Text('5小时'),
               onPressed: () {
-                Navigator.pop(context, WarmTime.two);
+                Navigator.pop(context, WarmTime.five);
               },
             ),
             SimpleDialogOption(
+              child: Text('10小时'),
+              onPressed: () {
+                Navigator.pop(context, WarmTime.ten);
+              },
+            ),
+            /* SimpleDialogOption(
               child: Text('3小时'),
               onPressed: () {
                 Navigator.pop(context, WarmTime.three);
@@ -637,32 +657,35 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.pop(context, WarmTime.four);
               },
-            ),
+            ),*/
           ],
         );
       },
     );
     //setting warm time
     switch (warmTimeOption) {
-      case WarmTime.half:
-        setState(() {
-          warmTimeChoice = '半小时';
-        });
-        warmTimeNum = 0x1E;
-        break;
       case WarmTime.one:
         setState(() {
           warmTimeChoice = '1小时';
         });
-        warmTimeNum = 0x3C;
+        warmTimeHighNum = 0x00;
+        warmTimeLowNum = 0x3C;
         break;
-      case WarmTime.two:
+      case WarmTime.five:
         setState(() {
-          warmTimeChoice = '2小时';
+          warmTimeChoice = '5小时';
         });
-        warmTimeNum = 0x78;
+        warmTimeHighNum = 0x01;
+        warmTimeLowNum = 0x2C;
         break;
-      case WarmTime.three:
+      case WarmTime.ten:
+        setState(() {
+          warmTimeChoice = '10小时';
+        });
+        warmTimeHighNum = 0x02;
+        warmTimeLowNum = 0x58;
+        break;
+    /*case WarmTime.three:
         setState(() {
           warmTimeChoice = '3小时';
         });
@@ -673,10 +696,11 @@ class _MyHomePageState extends State<MyHomePage> {
           warmTimeChoice = '4小时';
         });
         warmTimeNum = 0xF0;
-        break;
+        break;*/
       default:
         warmTimeChoice = '1小时';
-        warmTimeNum = 0x3C;
+        warmTimeHighNum = 0x00;
+        warmTimeLowNum = 0x3C;
     }
   }
 
@@ -818,7 +842,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.pop(context, MassageMode.two);
               },
             ),
-            SimpleDialogOption(
+            /*SimpleDialogOption(
               child: Text('慢揉'),
               onPressed: () {
                 Navigator.pop(context, MassageMode.three);
@@ -835,7 +859,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.pop(context, MassageMode.five);
               },
-            ),
+            ),*/
           ],
         );
       },
@@ -860,7 +884,7 @@ class _MyHomePageState extends State<MyHomePage> {
         });
         massageModeNum = 0x02;
         break;
-      case MassageMode.three:
+    /*case MassageMode.three:
         setState(() {
           massageModeChoice = '慢揉';
         });
@@ -877,7 +901,7 @@ class _MyHomePageState extends State<MyHomePage> {
           massageModeChoice = '跳跃';
         });
         massageModeNum = 0x05;
-        break;
+        break;*/
       default:
         massageModeChoice = '持续';
         massageModeNum = 0x00;
@@ -920,23 +944,27 @@ class _MyHomePageState extends State<MyHomePage> {
         setState(() {
           massageTimeChoice = '15分钟';
         });
-        massageTimeNum = 0x0F;
+        massageTimeHighNum = 0x00;
+        massageTimeLowNum = 0x0F;
         break;
       case MassageTime.half:
         setState(() {
           massageTimeChoice = '30分钟';
         });
-        massageTimeNum = 0x1E;
+        massageTimeHighNum = 0x00;
+        massageTimeLowNum = 0x1E;
         break;
       case MassageTime.one:
         setState(() {
           massageTimeChoice = '1小时';
         });
-        massageTimeNum = 0x3C;
+        massageTimeHighNum = 0x00;
+        massageTimeLowNum = 0x3C;
         break;
       default:
         massageTimeChoice = '15分钟';
-        massageTimeNum = 0x0F;
+        massageTimeHighNum = 0x00;
+        massageTimeLowNum = 0x0F;
     }
   }
 
@@ -949,21 +977,21 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('按摩强度'),
           children: [
             SimpleDialogOption(
-              child: Text('低'),
+              child: Text('高'),
               onPressed: () {
-                Navigator.pop(context, MassageStrength.one);
+                Navigator.pop(context, MassageStrength.high);
               },
             ),
             SimpleDialogOption(
               child: Text('中'),
               onPressed: () {
-                Navigator.pop(context, MassageStrength.two);
+                Navigator.pop(context, MassageStrength.middle);
               },
             ),
             SimpleDialogOption(
-              child: Text('高'),
+              child: Text('低'),
               onPressed: () {
-                Navigator.pop(context, MassageStrength.three);
+                Navigator.pop(context, MassageStrength.low);
               },
             ),
           ],
@@ -972,23 +1000,23 @@ class _MyHomePageState extends State<MyHomePage> {
     );
     //setting warm time
     switch (massageStrengthOption) {
-      case MassageStrength.one:
+      case MassageStrength.high:
         setState(() {
-          massageStrengthChoice = '低';
+          massageStrengthChoice = '高';
         });
-        massageStrengthNum = 0x32;
+        massageStrengthNum = 0x64;
         break;
-      case MassageStrength.two:
+      case MassageStrength.middle:
         setState(() {
           massageStrengthChoice = '中';
         });
         massageStrengthNum = 0x4B;
         break;
-      case MassageStrength.three:
+      case MassageStrength.low:
         setState(() {
-          massageStrengthChoice = '高';
+          massageStrengthChoice = '低';
         });
-        massageStrengthNum = 0x64;
+        massageStrengthNum = 0x32;
         break;
       default:
         massageStrengthChoice = '低';
@@ -1000,18 +1028,18 @@ class _MyHomePageState extends State<MyHomePage> {
   startWarmDataSend() async {
     var b2 = warmGearNum;
     print(b2);
-    var b3 = warmTimeNum;
-    var b4 = 0x01;
-    var b5 = 0x0A;
-    // var b6 = 0x00;
+    var b3 = warmTimeHighNum;
+    var b4 = warmTimeLowNum;
+    var b5 = 0x01; //加热1分钟
+    var b6 = 0x23; //暂停35秒
     //校验和，2-7相加后取低8位
-    var bSum = 0x31 + b2 + b3 + b4 + b5 + 0x00;
+    var bSum = 0x31 + b2 + b3 + b4 + b5 + b6 + 0x00;
     var checkSum = bSum & 0xff;
     print(bSum);
     print(checkSum);
 
     List<int> startWarmWriteDataList =
-        ([0xFF, 0x31, b2, b3, b4, b5, 0x00, checkSum]);
+    ([0xFF, 0x31, b2, b3, b4, b5, b6, 0x00, checkSum]);
     print(
         'this is the warm on data list: ' + startWarmWriteDataList.toString());
     if (isCharging == true) {
@@ -1034,7 +1062,7 @@ class _MyHomePageState extends State<MyHomePage> {
 /*send warm off data*/
   stopWarmDataSend() async {
     List<int> stopWarmWriteDataList =
-        ([0xff, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x30]);
+    ([0xff, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x30]);
     if (Global.isConnected == true) {
       if (isWarming == true) {
         await connectedDeviceChar.write(stopWarmWriteDataList,
@@ -1047,7 +1075,7 @@ class _MyHomePageState extends State<MyHomePage> {
         });
         // showToastHint('已停止加热');
       } else {
-        showToastHint('设备未在加热');
+        showToastHint('设备未开启加热');
       }
     } else {
       showToastHint('请连接设备');
@@ -1057,16 +1085,15 @@ class _MyHomePageState extends State<MyHomePage> {
   /*send massage on data*/
   startMassageDataSend() async {
     var b2 = massageModeNum;
-    var b3 = massageTimeNum;
-    var b4 = massageStrengthNum;
-    // var b5 = 0x0A;
-    // var b6 = 0x00;
+    var b3 = massageTimeHighNum;
+    var b4 = massageTimeLowNum;
+    var b5 = massageStrengthNum;
     //校验和，2-7相加后取低8位
-    var bSum = 0xC1 + b2 + b3 + b4 + 0x00 + 0x00;
+    var bSum = 0xC1 + b2 + b3 + b4 + b5 + 0x00 + 0x00;
     var checkSum = bSum & 0xff;
 
     List<int> startMassageWriteDataList =
-        ([0xFF, 0xC1, b2, b3, b4, 0x00, 0x00, checkSum]);
+    ([0xFF, 0xC1, b2, b3, b4, b5, 0x00, 0x00, checkSum]);
     print('this is the massage on data list: ' +
         startMassageWriteDataList.toString());
     if (isCharging == true) {
@@ -1089,7 +1116,7 @@ class _MyHomePageState extends State<MyHomePage> {
 /*send massage off data*/
   stopMassageDataSend() async {
     List<int> stopMassageWriteDataList =
-        ([0xff, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC0]);
+    ([0xff, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC0]);
     if (Global.isConnected == true) {
       if (isMassaging == true) {
         await connectedDeviceChar.write(stopMassageWriteDataList,
@@ -1150,7 +1177,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     // print('the connected device is ' + Global.connectedDevice.name);
     List<BluetoothService> _services =
-        await Global.connectedDevice.discoverServices();
+    await Global.connectedDevice.discoverServices();
     for (BluetoothService s in _services) {
       if (s.uuid.toString().toUpperCase().substring(4, 8) == "FFF0") {
         print(s.uuid);
@@ -1170,7 +1197,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // do something with new value
       // print("我是蓝牙返回数据 - $value");
       if (value == null) {
-        print("我是蓝牙返回数据 - 空！！");
+        print("蓝牙返回空数据！！");
         return;
       }
       List data = [];
@@ -1286,6 +1313,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
             /*update massage strength*/
             print('data[4] is ' + data[4]);
+            print('data[5] is ' + data[5]);
             /*switch (data[4]) {
               case '0x64':
                 setState(() {
@@ -1313,10 +1341,12 @@ class _MyHomePageState extends State<MyHomePage> {
           }
 
           /*update battery situation, no matter warm or massage, it's the same*/
-          print('data[6] is ' + data[6]);
-          switch (data[6]) {
+          print('data[7] is ' + data[7]);
+          switch (data[7]) {
             case '0x00':
               setState(() {
+                _isToFindPageHide=true;
+                _isChargeHide = true;
                 isCharging = false;
                 _isBatteryHide = false;
                 batteryImageLink = 'images/battery-4.png';
@@ -1324,6 +1354,8 @@ class _MyHomePageState extends State<MyHomePage> {
               break;
             case '0x01':
               setState(() {
+                _isToFindPageHide=true;
+                _isChargeHide = true;
                 isCharging = false;
                 _isBatteryHide = false;
                 batteryImageLink = 'images/battery-3.png';
@@ -1331,6 +1363,8 @@ class _MyHomePageState extends State<MyHomePage> {
               break;
             case '0x02':
               setState(() {
+                _isToFindPageHide=true;
+                _isChargeHide = true;
                 isCharging = false;
                 _isBatteryHide = false;
                 batteryImageLink = 'images/battery-2.png';
@@ -1338,6 +1372,8 @@ class _MyHomePageState extends State<MyHomePage> {
               break;
             case '0x03':
               setState(() {
+                _isToFindPageHide=true;
+                _isChargeHide = true;
                 isCharging = false;
                 _isBatteryHide = false;
                 batteryImageLink = 'images/battery-1.png';
@@ -1345,6 +1381,7 @@ class _MyHomePageState extends State<MyHomePage> {
               break;
             case '0x10':
               setState(() {
+                _isToFindPageHide=true;
                 isCharging = true;
                 _isChargeHide = false;
                 _isBatteryHide = false;
@@ -1353,6 +1390,7 @@ class _MyHomePageState extends State<MyHomePage> {
               break;
             case '0x11':
               setState(() {
+                _isToFindPageHide=true;
                 isCharging = true;
                 _isChargeHide = false;
                 _isBatteryHide = false;
@@ -1361,6 +1399,7 @@ class _MyHomePageState extends State<MyHomePage> {
               break;
             case '0x12':
               setState(() {
+                _isToFindPageHide=true;
                 isCharging = true;
                 _isChargeHide = false;
                 _isBatteryHide = false;
@@ -1369,6 +1408,7 @@ class _MyHomePageState extends State<MyHomePage> {
               break;
             case '0x13':
               setState(() {
+                _isToFindPageHide=true;
                 isCharging = true;
                 _isChargeHide = false;
                 _isBatteryHide = false;

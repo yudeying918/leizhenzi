@@ -2,35 +2,38 @@
     name="release"
     package="com.jsfengqu.smartbra"
     minSdkVersion="19"
-    targetSdkVersion="31"
-    mergedManifest="/Users/ydy/Desktop/FengquBra/build/app/intermediates/merged_manifest/release/AndroidManifest.xml"
-    proguardFiles="/Users/ydy/Desktop/FengquBra/build/app/intermediates/default_proguard_files/global/proguard-android.txt-7.1.0:/Applications/flutter/packages/flutter_tools/gradle/flutter_proguard_rules.pro:proguard-rules.pro"
-    partialResultsDir="/Users/ydy/Desktop/FengquBra/build/app/intermediates/lint_vital_partial_results/release/out">
+    targetSdkVersion="33"
+    mergedManifest="D:\FengquBra\build\app\intermediates\merged_manifest\release\AndroidManifest.xml"
+    proguardFiles="D:\FengquBra\build\app\intermediates\default_proguard_files\global\proguard-android.txt-7.4.1;E:\flutter\packages\flutter_tools\gradle\flutter_proguard_rules.pro;proguard-rules.pro"
+    partialResultsDir="D:\FengquBra\build\app\intermediates\lint_vital_partial_results\release\out"
+    desugaredMethodsFiles="C:\Users\Administrator\.gradle\caches\transforms-3\9e3dc29af6d1e98a1fb21a7e6972cb93\transformed\D8BackportedDesugaredMethods.txt">
   <buildFeatures
       namespacing="REQUIRED"/>
   <sourceProviders>
     <sourceProvider
-        manifest="src/main/AndroidManifest.xml"
-        javaDirectories="src/main/java:src/main/kotlin"
-        resDirectories="src/main/res"
-        assetsDirectories="src/main/assets"/>
+        manifest="src\main\AndroidManifest.xml"
+        javaDirectories="src\main\java;src\main\kotlin"
+        resDirectories="src\main\res"
+        assetsDirectories="src\main\assets"/>
     <sourceProvider
-        manifest="src/release/AndroidManifest.xml"
-        javaDirectories="src/release/java:src/release/kotlin"
-        resDirectories="src/release/res"
-        assetsDirectories="src/release/assets"/>
+        manifest="src\release\AndroidManifest.xml"
+        javaDirectories="src\release\java;src\release\kotlin"
+        resDirectories="src\release\res"
+        assetsDirectories="src\release\assets"/>
   </sourceProviders>
   <testSourceProviders>
   </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
   <manifestPlaceholders>
     <placeholder
         name="applicationName"
         value="android.app.Application" />
   </manifestPlaceholders>
   <mainArtifact
-      classOutputs="/Users/ydy/Desktop/FengquBra/build/app/intermediates/javac/release/classes:/Users/ydy/Desktop/FengquBra/build/app/intermediates/compile_and_runtime_not_namespaced_r_class_jar/release/R.jar"
+      classOutputs="D:\FengquBra\build\app\intermediates\javac\release\classes;D:\FengquBra\build\app\intermediates\compile_and_runtime_not_namespaced_r_class_jar\release\R.jar"
       applicationId="com.jsfengqu.smartbra"
-      generatedSourceFolders="/Users/ydy/Desktop/FengquBra/build/app/generated/ap_generated_sources/release/out:/Users/ydy/Desktop/FengquBra/build/app/generated/aidl_source_output_dir/release/out:/Users/ydy/Desktop/FengquBra/build/app/generated/source/buildConfig/release:/Users/ydy/Desktop/FengquBra/build/app/generated/renderscript_source_output_dir/release/out"
-      generatedResourceFolders="/Users/ydy/Desktop/FengquBra/build/app/generated/res/rs/release:/Users/ydy/Desktop/FengquBra/build/app/generated/res/resValues/release">
+      generatedSourceFolders="D:\FengquBra\build\app\generated\ap_generated_sources\release\out;D:\FengquBra\build\app\generated\aidl_source_output_dir\release\out;D:\FengquBra\build\app\generated\source\buildConfig\release;D:\FengquBra\build\app\generated\renderscript_source_output_dir\release\out"
+      generatedResourceFolders="D:\FengquBra\build\app\generated\res\rs\release;D:\FengquBra\build\app\generated\res\resValues\release">
   </mainArtifact>
 </variant>

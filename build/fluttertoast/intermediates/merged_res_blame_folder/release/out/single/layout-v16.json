@@ -1,6 +1,6 @@
 [
     {
-        "merged": "/Users/ydy/Desktop/FengquBra/build/fluttertoast/intermediates/merged_res/release/layout-v16/notification_template_custom_big.xml",
-        "source": "/Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/res/layout-v16/notification_template_custom_big.xml"
+        "merged": "io.github.ponnamkarthik.toast.fluttertoast-merged_res-10:/layout-v16/notification_template_custom_big.xml",
+        "source": "io.github.ponnamkarthik.toast.fluttertoast-core-1.6.0-1:/layout-v16/notification_template_custom_big.xml"
     }
 ]

@@ -1,18 +1,18 @@
 [
     {
-        "merged": "/Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_res/release/layout-v21/notification_action.xml",
-        "source": "/Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/res/layout-v21/notification_action.xml"
+        "merged": "com.boskokg.flutter_blue_plus-merged_res-10:/layout-v21/notification_action.xml",
+        "source": "com.boskokg.flutter_blue_plus-core-1.6.0-1:/layout-v21/notification_action.xml"
     },
     {
-        "merged": "/Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_res/release/layout-v21/notification_action_tombstone.xml",
-        "source": "/Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/res/layout-v21/notification_action_tombstone.xml"
+        "merged": "com.boskokg.flutter_blue_plus-merged_res-10:/layout-v21/notification_template_icon_group.xml",
+        "source": "com.boskokg.flutter_blue_plus-core-1.6.0-1:/layout-v21/notification_template_icon_group.xml"
     },
     {
-        "merged": "/Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_res/release/layout-v21/notification_template_icon_group.xml",
-        "source": "/Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/res/layout-v21/notification_template_icon_group.xml"
+        "merged": "com.boskokg.flutter_blue_plus-merged_res-10:/layout-v21/notification_template_custom_big.xml",
+        "source": "com.boskokg.flutter_blue_plus-core-1.6.0-1:/layout-v21/notification_template_custom_big.xml"
     },
     {
-        "merged": "/Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_res/release/layout-v21/notification_template_custom_big.xml",
-        "source": "/Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/res/layout-v21/notification_template_custom_big.xml"
+        "merged": "com.boskokg.flutter_blue_plus-merged_res-10:/layout-v21/notification_action_tombstone.xml",
+        "source": "com.boskokg.flutter_blue_plus-core-1.6.0-1:/layout-v21/notification_action_tombstone.xml"
     }
 ]

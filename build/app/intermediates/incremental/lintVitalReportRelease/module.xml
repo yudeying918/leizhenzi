@@ -1,14 +1,14 @@
 <lint-module
     format="1"
-    dir="/Users/ydy/Desktop/FengquBra/android/app"
+    dir="D:\FengquBra\android\app"
     name=":app"
     type="APP"
     maven="android:app:"
-    gradle="7.1.0"
-    buildFolder="/Users/ydy/Desktop/FengquBra/build/app"
-    bootClassPath="/Users/ydy/Library/Android/sdk/platforms/android-31/android.jar:/Users/ydy/Library/Android/sdk/build-tools/30.0.3/core-lambda-stubs.jar"
+    gradle="7.4.1"
+    buildFolder="D:\FengquBra\build\app"
+    bootClassPath="E:\AndroidSDK\platforms\android-33\android.jar;C:\Users\Administrator\AppData\Local\Android\sdk\build-tools\30.0.3\core-lambda-stubs.jar"
     javaSourceLevel="1.8"
-    compileTarget="android-31"
+    compileTarget="android-33"
     neverShrinking="true">
   <lintOptions
       abortOnError="true"

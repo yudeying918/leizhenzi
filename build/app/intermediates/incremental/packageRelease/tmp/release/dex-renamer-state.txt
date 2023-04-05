@@ -1,4 +1,4 @@
-#Sun Jan 01 23:38:02 CST 2023
-base.0=/Users/ydy/Desktop/FengquBra/build/app/intermediates/dex/release/mergeDexRelease/classes.dex
-renamed.0=classes.dex
+#Fri Mar 24 13:58:29 CST 2023
+base.0=D\:\\FengquBra\\build\\app\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
 path.0=classes.dex
+renamed.0=classes.dex

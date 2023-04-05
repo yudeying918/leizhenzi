@@ -1,26 +1,26 @@
 [
     {
-        "merged": "/Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_res/release/layout/notification_action_tombstone.xml",
-        "source": "/Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/res/layout/notification_action_tombstone.xml"
+        "merged": "com.boskokg.flutter_blue_plus-merged_res-10:/layout/custom_dialog.xml",
+        "source": "com.boskokg.flutter_blue_plus-core-1.6.0-1:/layout/custom_dialog.xml"
     },
     {
-        "merged": "/Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_res/release/layout/notification_template_part_chronometer.xml",
-        "source": "/Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/res/layout/notification_template_part_chronometer.xml"
+        "merged": "com.boskokg.flutter_blue_plus-merged_res-10:/layout/notification_template_part_time.xml",
+        "source": "com.boskokg.flutter_blue_plus-core-1.6.0-1:/layout/notification_template_part_time.xml"
     },
     {
-        "merged": "/Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_res/release/layout/notification_template_part_time.xml",
-        "source": "/Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/res/layout/notification_template_part_time.xml"
+        "merged": "com.boskokg.flutter_blue_plus-merged_res-10:/layout/notification_action_tombstone.xml",
+        "source": "com.boskokg.flutter_blue_plus-core-1.6.0-1:/layout/notification_action_tombstone.xml"
     },
     {
-        "merged": "/Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_res/release/layout/notification_action.xml",
-        "source": "/Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/res/layout/notification_action.xml"
+        "merged": "com.boskokg.flutter_blue_plus-merged_res-10:/layout/notification_template_icon_group.xml",
+        "source": "com.boskokg.flutter_blue_plus-core-1.6.0-1:/layout/notification_template_icon_group.xml"
     },
     {
-        "merged": "/Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_res/release/layout/notification_template_icon_group.xml",
-        "source": "/Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/res/layout/notification_template_icon_group.xml"
+        "merged": "com.boskokg.flutter_blue_plus-merged_res-10:/layout/notification_template_part_chronometer.xml",
+        "source": "com.boskokg.flutter_blue_plus-core-1.6.0-1:/layout/notification_template_part_chronometer.xml"
     },
     {
-        "merged": "/Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_res/release/layout/custom_dialog.xml",
-        "source": "/Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/res/layout/custom_dialog.xml"
+        "merged": "com.boskokg.flutter_blue_plus-merged_res-10:/layout/notification_action.xml",
+        "source": "com.boskokg.flutter_blue_plus-core-1.6.0-1:/layout/notification_action.xml"
     }
 ]

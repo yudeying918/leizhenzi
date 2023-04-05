@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/incremental/mergeReleaseResources/merged.dir/values-es/values-es.xml",
+            "outputFile": "com.boskokg.flutter_blue_plus-mergeReleaseResources-8:/values-es/values-es.xml",
             "map": [
                 {
-                    "source": "/Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/res/values-es/values-es.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-3\\479dd4bb6612b7cfbdde7fd13a3daa5e\\transformed\\core-1.6.0\\res\\values-es\\values-es.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "/Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_res/release/values-es/values-es.xml",
+            "outputFile": "com.boskokg.flutter_blue_plus-merged_res-10:/values-es/values-es.xml",
             "map": [
                 {
-                    "source": "/Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/res/values-es/values-es.xml",
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-3\\479dd4bb6612b7cfbdde7fd13a3daa5e\\transformed\\core-1.6.0\\res\\values-es\\values-es.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

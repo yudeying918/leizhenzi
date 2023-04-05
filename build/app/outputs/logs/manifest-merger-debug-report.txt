@@ -1,155 +1,162 @@
 -- Merging decision tree log ---
 application
-INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml:3:4-35:19
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/ydy/.gradle/caches/transforms-3/ab9b16f4ca3239a1d64f37d1c87af8a3/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/ydy/.gradle/caches/transforms-3/ab9b16f4ca3239a1d64f37d1c87af8a3/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
-MERGED from [androidx.core:core:1.6.0] /Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.6.0] /Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/ydy/.gradle/caches/transforms-3/cc524123d03cd62bd756475adefc7f6d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/ydy/.gradle/caches/transforms-3/cc524123d03cd62bd756475adefc7f6d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+INJECTED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:3:4-35:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.core:core:1.6.0] C:\Users\Administrator\.gradle\caches\transforms-3\479dd4bb6612b7cfbdde7fd13a3daa5e\transformed\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.6.0] C:\Users\Administrator\.gradle\caches\transforms-3\479dd4bb6612b7cfbdde7fd13a3daa5e\transformed\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-3\2588dbebb914a4847c23b9e2e9390de9\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-3\2588dbebb914a4847c23b9e2e9390de9\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.6.0] /Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.6.0] C:\Users\Administrator\.gradle\caches\transforms-3\479dd4bb6612b7cfbdde7fd13a3daa5e\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
 	android:name
-		INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml
+		INJECTED from D:\FengquBra\android\app\src\main\AndroidManifest.xml
 manifest
-ADDED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml:1:1-39:12
-INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml:1:1-39:12
-INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml:1:1-39:12
-INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml:1:1-39:12
-MERGED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml:1:1-39:12
-MERGED from [:flutter_blue_plus] /Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-31:12
-MERGED from [:fluttertoast] /Users/ydy/Desktop/FengquBra/build/fluttertoast/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/ydy/.gradle/caches/transforms-3/7dde3ae9f67f6fce1f9d48f66724336a/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/ydy/.gradle/caches/transforms-3/ab9b16f4ca3239a1d64f37d1c87af8a3/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.fragment:fragment:1.1.0] /Users/ydy/.gradle/caches/transforms-3/d2ba7c1848cd3a498f67b4b5476a8360/transformed/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/ydy/.gradle/caches/transforms-3/66b6dfa4cc629971dcb720d915639bdd/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] /Users/ydy/.gradle/caches/transforms-3/4813a920eb797ea3c25b16909fbbd3f0/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity:1.0.0] /Users/ydy/.gradle/caches/transforms-3/01bc602a50278be8c77726de418d5479/transformed/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.customview:customview:1.0.0] /Users/ydy/.gradle/caches/transforms-3/f318507e9503831e179e84344b19247b/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.6.0] /Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/ydy/.gradle/caches/transforms-3/35ecfe05ba319330f35ca9fcc1dde571/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/ydy/.gradle/caches/transforms-3/7271da5051ccabf41a2bacc9c070d3ce/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/ydy/.gradle/caches/transforms-3/76a246d11452e5aa5a75a0ba6a0fe1a2/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/ydy/.gradle/caches/transforms-3/df0094c80e1a2d9ac629c536a0efe87e/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/ydy/.gradle/caches/transforms-3/4da567dfcc36fdab546739df196c1998/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/ydy/.gradle/caches/transforms-3/f793df7da7e755c4ae8f49b24e04ae37/transformed/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/ydy/.gradle/caches/transforms-3/cc524123d03cd62bd756475adefc7f6d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/ydy/.gradle/caches/transforms-3/3f186c087d1f1c96423d86120b1436cb/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/ydy/.gradle/caches/transforms-3/0ee584de1cde650c25280b940beb9c66/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/debug/AndroidManifest.xml:1:1-7:12
-INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/debug/AndroidManifest.xml:1:1-7:12
-INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+ADDED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:1:1-42:12
+INJECTED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:1:1-42:12
+INJECTED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:1:1-42:12
+INJECTED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:1:1-42:12
+MERGED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:1:1-42:12
+MERGED from [:permission_handler_android] D:\FengquBra\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-23:12
+MERGED from [:fluttertoast] D:\FengquBra\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\f01d600dad128af9f0fc5b3f69f1ac4b\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\f435fd5de94f958b4c53d47201968a19\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\ffa6ff59be780381963989a9f5cf67d3\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\85f86d78fcd14a3f534bf898212a06d9\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\274159b56b7d3cb450d75fca9706c1ea\transformed\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\707124f09255db0449f16e3157a975ce\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.6.0] C:\Users\Administrator\.gradle\caches\transforms-3\479dd4bb6612b7cfbdde7fd13a3daa5e\transformed\core-1.6.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\314afe50cb7b93d60a17c1b0c3aac485\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\7450bb8f5f92bd4221265db8ee10ff96\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\bfacf2ee5ac7cac2e44ce4e891127432\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\4d1f2431f528cf60c503cb0d54814881\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\3a3a275f9203edea31a0d5b0030253cd\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\c057147ccced6033784e36101cd17c89\transformed\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-3\2588dbebb914a4847c23b9e2e9390de9\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\f3b2285cc1a2406cfaeb83aacd07146d\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\203debc3fca0502984fa62fae6994c46\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+INJECTED from D:\FengquBra\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\FengquBra\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\FengquBra\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 	package
-		ADDED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml:2:5-36
-		INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/debug/AndroidManifest.xml
+		ADDED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:2:5-36
+		INJECTED from D:\FengquBra\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\FengquBra\android\app\src\debug\AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml:1:1-39:12
-		INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/debug/AndroidManifest.xml
+		INJECTED from D:\FengquBra\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:1:1-42:12
+		INJECTED from D:\FengquBra\android\app\src\debug\AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml:1:1-39:12
-		INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/debug/AndroidManifest.xml
+		INJECTED from D:\FengquBra\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:1:1-42:12
+		INJECTED from D:\FengquBra\android\app\src\debug\AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml:1:11-69
+		ADDED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:1:11-69
 uses-permission#android.permission.BLUETOOTH
-ADDED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml:36:5-68
-MERGED from [:flutter_blue_plus] /Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:23:5-25:38
-MERGED from [:flutter_blue_plus] /Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:23:5-25:38
+ADDED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:36:5-68
+MERGED from [:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-17:38
+MERGED from [:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-17:38
 	android:maxSdkVersion
-		ADDED from [:flutter_blue_plus] /Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:25:9-35
+		ADDED from [:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-35
 	android:name
-		ADDED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml:36:22-65
+		ADDED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:36:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml:37:5-74
-MERGED from [:flutter_blue_plus] /Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:26:5-28:38
-MERGED from [:flutter_blue_plus] /Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:26:5-28:38
+ADDED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:37:5-74
+MERGED from [:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:18:5-20:38
+MERGED from [:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:18:5-20:38
 	android:maxSdkVersion
-		ADDED from [:flutter_blue_plus] /Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:28:9-35
+		ADDED from [:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:20:9-35
 	android:name
-		ADDED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml:37:22-71
+		ADDED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:37:22-71
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml:38:5-80
+ADDED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:38:5-80
 	android:name
-		ADDED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml:38:22-78
-uses-sdk
-INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml
-INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml
-MERGED from [:flutter_blue_plus] /Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:flutter_blue_plus] /Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:fluttertoast] /Users/ydy/Desktop/FengquBra/build/fluttertoast/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:fluttertoast] /Users/ydy/Desktop/FengquBra/build/fluttertoast/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/ydy/.gradle/caches/transforms-3/7dde3ae9f67f6fce1f9d48f66724336a/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
-MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/ydy/.gradle/caches/transforms-3/7dde3ae9f67f6fce1f9d48f66724336a/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/ydy/.gradle/caches/transforms-3/ab9b16f4ca3239a1d64f37d1c87af8a3/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/ydy/.gradle/caches/transforms-3/ab9b16f4ca3239a1d64f37d1c87af8a3/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.1.0] /Users/ydy/.gradle/caches/transforms-3/d2ba7c1848cd3a498f67b4b5476a8360/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.1.0] /Users/ydy/.gradle/caches/transforms-3/d2ba7c1848cd3a498f67b4b5476a8360/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/ydy/.gradle/caches/transforms-3/66b6dfa4cc629971dcb720d915639bdd/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/ydy/.gradle/caches/transforms-3/66b6dfa4cc629971dcb720d915639bdd/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/ydy/.gradle/caches/transforms-3/4813a920eb797ea3c25b16909fbbd3f0/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/ydy/.gradle/caches/transforms-3/4813a920eb797ea3c25b16909fbbd3f0/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.0.0] /Users/ydy/.gradle/caches/transforms-3/01bc602a50278be8c77726de418d5479/transformed/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.0.0] /Users/ydy/.gradle/caches/transforms-3/01bc602a50278be8c77726de418d5479/transformed/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.0.0] /Users/ydy/.gradle/caches/transforms-3/f318507e9503831e179e84344b19247b/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /Users/ydy/.gradle/caches/transforms-3/f318507e9503831e179e84344b19247b/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.6.0] /Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.6.0] /Users/ydy/.gradle/caches/transforms-3/2b13f2dac15a6178b2b689dbb7518089/transformed/core-1.6.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/ydy/.gradle/caches/transforms-3/35ecfe05ba319330f35ca9fcc1dde571/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/ydy/.gradle/caches/transforms-3/35ecfe05ba319330f35ca9fcc1dde571/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/ydy/.gradle/caches/transforms-3/7271da5051ccabf41a2bacc9c070d3ce/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/ydy/.gradle/caches/transforms-3/7271da5051ccabf41a2bacc9c070d3ce/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/ydy/.gradle/caches/transforms-3/76a246d11452e5aa5a75a0ba6a0fe1a2/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/ydy/.gradle/caches/transforms-3/76a246d11452e5aa5a75a0ba6a0fe1a2/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/ydy/.gradle/caches/transforms-3/df0094c80e1a2d9ac629c536a0efe87e/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/ydy/.gradle/caches/transforms-3/df0094c80e1a2d9ac629c536a0efe87e/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/ydy/.gradle/caches/transforms-3/4da567dfcc36fdab546739df196c1998/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/ydy/.gradle/caches/transforms-3/4da567dfcc36fdab546739df196c1998/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/ydy/.gradle/caches/transforms-3/f793df7da7e755c4ae8f49b24e04ae37/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/ydy/.gradle/caches/transforms-3/f793df7da7e755c4ae8f49b24e04ae37/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/ydy/.gradle/caches/transforms-3/cc524123d03cd62bd756475adefc7f6d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/ydy/.gradle/caches/transforms-3/cc524123d03cd62bd756475adefc7f6d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/ydy/.gradle/caches/transforms-3/3f186c087d1f1c96423d86120b1436cb/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/ydy/.gradle/caches/transforms-3/3f186c087d1f1c96423d86120b1436cb/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/ydy/.gradle/caches/transforms-3/0ee584de1cde650c25280b940beb9c66/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/ydy/.gradle/caches/transforms-3/0ee584de1cde650c25280b940beb9c66/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
-INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/debug/AndroidManifest.xml
-INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/debug/AndroidManifest.xml
-	android:targetSdkVersion
-		INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/debug/AndroidManifest.xml
-	android:minSdkVersion
-		INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/ydy/Desktop/FengquBra/android/app/src/debug/AndroidManifest.xml
-uses-permission#android.permission.INTERNET
-ADDED from /Users/ydy/Desktop/FengquBra/android/app/src/debug/AndroidManifest.xml:6:5-66
+		ADDED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:38:22-78
+uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
+ADDED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:39:5-84
 	android:name
-		ADDED from /Users/ydy/Desktop/FengquBra/android/app/src/debug/AndroidManifest.xml:6:22-64
-uses-permission#android.permission.BLUETOOTH_SCAN
-ADDED from [:flutter_blue_plus] /Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:17:5-19:58
-	android:usesPermissionFlags
-		ADDED from [:flutter_blue_plus] /Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:19:9-55
-	android:name
-		ADDED from [:flutter_blue_plus] /Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:18:9-57
-uses-permission#android.permission.BLUETOOTH_CONNECT
-ADDED from [:flutter_blue_plus] /Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:20:5-76
-	android:name
-		ADDED from [:flutter_blue_plus] /Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:20:22-73
+		ADDED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:39:22-82
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from [:flutter_blue_plus] /Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:29:5-79
+ADDED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:40:5-78
+MERGED from [:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:21:5-79
+MERGED from [:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:21:5-79
 	android:name
-		ADDED from [:flutter_blue_plus] /Users/ydy/Desktop/FengquBra/build/flutter_blue_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:29:22-76
+		ADDED from D:\FengquBra\android\app\src\main\AndroidManifest.xml:40:22-76
+uses-sdk
+INJECTED from D:\FengquBra\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\FengquBra\android\app\src\main\AndroidManifest.xml
+INJECTED from D:\FengquBra\android\app\src\main\AndroidManifest.xml
+MERGED from [:permission_handler_android] D:\FengquBra\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler_android] D:\FengquBra\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] D:\FengquBra\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] D:\FengquBra\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\f01d600dad128af9f0fc5b3f69f1ac4b\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\f01d600dad128af9f0fc5b3f69f1ac4b\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\f435fd5de94f958b4c53d47201968a19\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\f435fd5de94f958b4c53d47201968a19\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\ffa6ff59be780381963989a9f5cf67d3\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\ffa6ff59be780381963989a9f5cf67d3\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\85f86d78fcd14a3f534bf898212a06d9\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\85f86d78fcd14a3f534bf898212a06d9\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\274159b56b7d3cb450d75fca9706c1ea\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\274159b56b7d3cb450d75fca9706c1ea\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\707124f09255db0449f16e3157a975ce\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\707124f09255db0449f16e3157a975ce\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.6.0] C:\Users\Administrator\.gradle\caches\transforms-3\479dd4bb6612b7cfbdde7fd13a3daa5e\transformed\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.6.0] C:\Users\Administrator\.gradle\caches\transforms-3\479dd4bb6612b7cfbdde7fd13a3daa5e\transformed\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\314afe50cb7b93d60a17c1b0c3aac485\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\314afe50cb7b93d60a17c1b0c3aac485\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\7450bb8f5f92bd4221265db8ee10ff96\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\7450bb8f5f92bd4221265db8ee10ff96\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\bfacf2ee5ac7cac2e44ce4e891127432\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\bfacf2ee5ac7cac2e44ce4e891127432\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\4d1f2431f528cf60c503cb0d54814881\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\4d1f2431f528cf60c503cb0d54814881\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\3a3a275f9203edea31a0d5b0030253cd\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\3a3a275f9203edea31a0d5b0030253cd\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\c057147ccced6033784e36101cd17c89\transformed\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\c057147ccced6033784e36101cd17c89\transformed\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-3\2588dbebb914a4847c23b9e2e9390de9\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-3\2588dbebb914a4847c23b9e2e9390de9\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\f3b2285cc1a2406cfaeb83aacd07146d\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\f3b2285cc1a2406cfaeb83aacd07146d\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\203debc3fca0502984fa62fae6994c46\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\203debc3fca0502984fa62fae6994c46\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+INJECTED from D:\FengquBra\android\app\src\debug\AndroidManifest.xml
+INJECTED from D:\FengquBra\android\app\src\debug\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\FengquBra\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\FengquBra\android\app\src\debug\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\FengquBra\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\FengquBra\android\app\src\debug\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from D:\FengquBra\android\app\src\debug\AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from D:\FengquBra\android\app\src\debug\AndroidManifest.xml:6:22-64
+uses-permission#android.permission.BLUETOOTH_SCAN
+ADDED from [:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-73
+	android:name
+		ADDED from [:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-70
+uses-permission#android.permission.BLUETOOTH_CONNECT
+ADDED from [:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-76
+	android:name
+		ADDED from [:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:12:22-73
 uses-library#androidx.window.extensions
-ADDED from [androidx.window:window:1.0.0-beta04] /Users/ydy/.gradle/caches/transforms-3/ab9b16f4ca3239a1d64f37d1c87af8a3/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
 	android:required
-		ADDED from [androidx.window:window:1.0.0-beta04] /Users/ydy/.gradle/caches/transforms-3/ab9b16f4ca3239a1d64f37d1c87af8a3/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [androidx.window:window:1.0.0-beta04] /Users/ydy/.gradle/caches/transforms-3/ab9b16f4ca3239a1d64f37d1c87af8a3/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
 uses-library#androidx.window.sidecar
-ADDED from [androidx.window:window:1.0.0-beta04] /Users/ydy/.gradle/caches/transforms-3/ab9b16f4ca3239a1d64f37d1c87af8a3/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
 	android:required
-		ADDED from [androidx.window:window:1.0.0-beta04] /Users/ydy/.gradle/caches/transforms-3/ab9b16f4ca3239a1d64f37d1c87af8a3/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from [androidx.window:window:1.0.0-beta04] /Users/ydy/.gradle/caches/transforms-3/ab9b16f4ca3239a1d64f37d1c87af8a3/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51

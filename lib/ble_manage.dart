@@ -77,32 +77,13 @@ class FindDevicesScreen extends StatefulWidget {
 
 class _FindDevicesScreenState extends State<FindDevicesScreen> {
 
-
-
   _addDeviceTolist(final BluetoothDevice device) {
-    if (!widget.devicesList.contains(device) && device.name.contains('FQ')) {
+          // if (!widget.devicesList.contains(device) && device.name.contains('FQ')) {
+            if (!widget.devicesList.contains(device) ) {
       setState(() {
         widget.devicesList.add(device);
       });
     }
-  }
-
-  getAllBleList(){
-
-
-    widget.flutterBlue.startScan(timeout: const Duration(seconds: 3));
-    widget.flutterBlue.connectedDevices
-        .asStream()
-        .listen((List<BluetoothDevice> devices) {
-      for (BluetoothDevice device in devices) {
-        _addDeviceTolist(device);
-      }
-    });
-    widget.flutterBlue.scanResults.listen((List<ScanResult> results) {
-      for (ScanResult result in results) {
-        _addDeviceTolist(result.device);
-      }
-    });
   }
 
   void connectDevice(BluetoothDevice _device) async {
@@ -124,71 +105,100 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
       }
     }
     print(_device.name + ' is connected');
-    // setState(() {
+    setState(() {
       Global.connectedDevice = _device;
       Global.isConnected = true;
-    // });
+    });
 
   }
 
   void disConnectDevice(BluetoothDevice _device) {
     _device.disconnect();
     print(_device.name + ' is disconnected');
+    setState(() {
+            Global.isConnected = false;
+    });
   }
 
-  List<Widget> listAllBleResults(){
-      List<Widget> list = <Widget>[];
-      for (BluetoothDevice device in widget.devicesList) {
-        list.add(
-          // SizedBox(
-          //   height: 50,
-          //   child:
-           ListTile(
-                        title: Text(device.name),
-                        subtitle: Text(device.id.toString()),
-                        trailing: StreamBuilder<BluetoothDeviceState>(
-                          stream: device.state,
-                          initialData: BluetoothDeviceState.connecting,
-                          builder: (c, snapshot) {
-                            VoidCallback? onPressed;
-                            String text;
-                            switch (snapshot.data) {
-                              case BluetoothDeviceState.connected:
-                                onPressed = () => disConnectDevice(device);
-                                text = '断开连接';
-                                break;
-                              case BluetoothDeviceState.disconnected:
-                                onPressed = () => connectDevice(device);
-                                text = '连接';
-                                break;
-                              default:
-                                onPressed = null;
-                                text = snapshot.data.toString().substring(21).toUpperCase();
-                                break;
-                            }
-                            return TextButton(
-                                onPressed: onPressed,
-                                child: Text(
-                                  text,
-                                  style: Theme.of(context)
-                                      .primaryTextTheme
-                                      .button
-                                      ?.copyWith(color: Colors.pinkAccent),
-                                ));
-                          },
-                        ),
-                      )
-                );
-            // );
+  updateBleList(){
+    widget.flutterBlue.connectedDevices
+        .asStream()
+        .listen((List<BluetoothDevice> devices) {
+      for (BluetoothDevice device in devices) {
+        _addDeviceTolist(device);
       }
+    });
+    widget.flutterBlue.scanResults.listen((List<ScanResult> results) {
+      for (ScanResult result in results) {
+        _addDeviceTolist(result.device);
+      }
+    });
+  }
 
-      // return ListView()
-      //   children: <Widget>[
-      //     ...containers,
-      //   ],
-    return list;
+  scanList(){
+    // updateBleList();
+    widget.flutterBlue.startScan(timeout: const Duration(seconds: 3));
+  }
+
+  listAllBleResults(){
+    updateBleList();
+    List<Widget> list = <Widget>[];
+    for (BluetoothDevice device in widget.devicesList) {
+      list.add(
+          SizedBox(
+            height: 40,
+              child: ListTile(
+            title: Text(device.name),
+            // subtitle: Text(device.id.toString()),
+            trailing: StreamBuilder<BluetoothDeviceState>(
+              stream: device.state,
+              initialData: BluetoothDeviceState.connecting,
+              builder: (c, snapshot) {
+                VoidCallback? onPressed;
+                String text;
+                switch (snapshot.data) {
+                  case BluetoothDeviceState.connected:
+                    onPressed = () => disConnectDevice(device);
+                    text = '已连接';
+                    break;
+                  case BluetoothDeviceState.disconnected:
+                    onPressed = () => connectDevice(device);
+                    text = '连接';
+                    break;
+                  case BluetoothDeviceState.connecting:
+                    onPressed = null;
+                    text = '正在连接...';
+                    break;
+                  default:
+                    onPressed = null;
+                    text = snapshot.data.toString().substring(21).toUpperCase();
+                    break;
+                }
+                return TextButton(
+                    onPressed: onPressed,
+                    child: Text(
+                      text,
+                      style: Theme.of(context)
+                          .primaryTextTheme
+                          .labelLarge
+                          ?.copyWith(color: Colors.pinkAccent),
+                    ));
+              },
+            ),
+          ),
+          ),
+      );
       // );
     }
+
+    return ListView(
+      padding: const EdgeInsets.all(8),
+      children: <Widget>[
+        ...list,
+      ],
+    );
+
+  }
 
 
 
@@ -196,7 +206,13 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    getAllBleList();
+    scanList();
+
+  }
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
   }
 
   @override
@@ -204,6 +220,7 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
     print('ble page build');
 
     return Scaffold(
+      backgroundColor: Colors.white,
           appBar: AppBar(
             backgroundColor: Colors.white,
             elevation: 0,
@@ -226,9 +243,8 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
                 height: 400,
                 padding: EdgeInsets.only(top: 5.0,left: 5.0,right: 5.0),
                 margin: EdgeInsets.only(left: 10.0,right: 10.0),
-                child: ListView(
-                  children: listAllBleResults(),
-                ),
+                child:
+                listAllBleResults(),
               ),
               Container(
                 height: 50,
@@ -252,9 +268,10 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
                           ),
                           onPressed: () =>FlutterBluePlus.instance.stopScan(),
                           child:
-                          Text('停止扫描',
-                              style: TextStyle(
-                                fontSize: 15.0,))
+                          CircularProgressIndicator(color: Colors.pinkAccent,),
+                      //     Text('停止扫描',
+                      //         style: TextStyle(
+                      //           fontSize: 15.0,))
                       );
                     }else{
                       return OutlinedButton(
@@ -268,7 +285,7 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
                       padding: EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 10.0),
                       // padding: EdgeInsets.symmetric(vertical: 5.0,horizontal: 10.0),
                       ),
-                      onPressed: () { getAllBleList(); },
+                      onPressed: () { scanList(); },
                       child:
                       Text('重新扫描',
                       style: TextStyle(
@@ -280,29 +297,6 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
               )
             ],
           ),
-
-
-          // listAllBleResults(),
-
-          /*floatingActionButton: StreamBuilder<bool>(
-        stream: FlutterBluePlus.instance.isScanning,
-        initialData: false,
-        builder: (c, snapshot) {
-          if (snapshot.data!) {
-            return FloatingActionButton(
-              child: const Icon(Icons.stop),
-              onPressed: () => FlutterBluePlus.instance.stopScan(),
-              backgroundColor: Colors.red,
-            );
-          } else {
-            return FloatingActionButton(
-                child: const Icon(Icons.search),
-                onPressed: () => getAllBleList(),
-                    // FlutterBluePlus.instance
-            );    // .startScan(timeout: const Duration(seconds: 4)));
-          }
-        },
-      ),*/
         );
   }
 
