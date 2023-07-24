@@ -1,2 +1,3 @@
-# FengquBra
-Fengqu bra control app
+# leizhenzi
+
+用于熙峰公板，目前可连接蓝牙，控制按摩功能：时间、长度、模式（7种）
