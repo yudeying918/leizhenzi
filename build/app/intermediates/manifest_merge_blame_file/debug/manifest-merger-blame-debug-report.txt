@@ -1,103 +1,106 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.jsfengqu.smartbra"
-4    android:versionCode="1"
-5    android:versionName="1.0.2" >
-6
-7    <uses-sdk
-8        android:minSdkVersion="19"
-9        android:targetSdkVersion="33" />
-10    <!--
-11         Flutter needs it to communicate with the running application
-12         to allow setting breakpoints, to provide hot reload, etc.
-13    -->
-14    <uses-permission android:name="android.permission.INTERNET" />
-14-->D:\FengquBra\android\app\src\debug\AndroidManifest.xml:6:5-66
-14-->D:\FengquBra\android\app\src\debug\AndroidManifest.xml:6:22-64
+3    package="com.dgfengqu.leizhenzi"
+4    android:versionCode="2"
+5    android:versionName="1.0.3" > <!-- <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> -->
+6    <uses-sdk
+7        android:minSdkVersion="21"
+8        android:targetSdkVersion="33" />
+9    <!--
+10         Flutter needs it to communicate with the running application
+11         to allow setting breakpoints, to provide hot reload, etc.
+12    -->
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->F:\leizhenzi-c\android\app\src\debug\AndroidManifest.xml:6:5-66
+13-->F:\leizhenzi-c\android\app\src\debug\AndroidManifest.xml:6:22-64
+14    <!-- Request legacy Bluetooth permissions on older devices. -->
 15    <uses-permission
-15-->D:\FengquBra\android\app\src\main\AndroidManifest.xml:36:5-68
+15-->F:\leizhenzi-c\android\app\src\main\AndroidManifest.xml:38:5-39:38
 16        android:name="android.permission.BLUETOOTH"
-16-->D:\FengquBra\android\app\src\main\AndroidManifest.xml:36:22-65
+16-->F:\leizhenzi-c\android\app\src\main\AndroidManifest.xml:38:22-65
 17        android:maxSdkVersion="30" />
-17-->[:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-35
+17-->F:\leizhenzi-c\android\app\src\main\AndroidManifest.xml:39:9-35
 18    <uses-permission
-18-->D:\FengquBra\android\app\src\main\AndroidManifest.xml:37:5-74
+18-->F:\leizhenzi-c\android\app\src\main\AndroidManifest.xml:40:5-41:38
 19        android:name="android.permission.BLUETOOTH_ADMIN"
-19-->D:\FengquBra\android\app\src\main\AndroidManifest.xml:37:22-71
+19-->F:\leizhenzi-c\android\app\src\main\AndroidManifest.xml:40:22-71
 20        android:maxSdkVersion="30" />
-20-->[:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:20:9-35
-21    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-21-->D:\FengquBra\android\app\src\main\AndroidManifest.xml:38:5-80
-21-->D:\FengquBra\android\app\src\main\AndroidManifest.xml:38:22-78
-22    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
-22-->D:\FengquBra\android\app\src\main\AndroidManifest.xml:39:5-84
-22-->D:\FengquBra\android\app\src\main\AndroidManifest.xml:39:22-82
-23    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-23-->D:\FengquBra\android\app\src\main\AndroidManifest.xml:40:5-78
-23-->D:\FengquBra\android\app\src\main\AndroidManifest.xml:40:22-76
-24    <!--
-25         New Bluetooth permissions in Android 12
-26           https://developer.android.com/about/versions/12/features/bluetooth-permissions
-27    -->
-28    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
-28-->[:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-73
-28-->[:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-70
+20-->F:\leizhenzi-c\android\app\src\main\AndroidManifest.xml:41:9-35
+21    <!--
+22 Include "neverForLocation" only if you can strongly assert that
+23         your app never derives physical location from Bluetooth scan results.
+24    -->
+25    <uses-permission
+25-->F:\leizhenzi-c\android\app\src\main\AndroidManifest.xml:45:5-47:31
+26        android:name="android.permission.BLUETOOTH_SCAN"
+26-->F:\leizhenzi-c\android\app\src\main\AndroidManifest.xml:45:22-70
+27        android:usesPermissionFlags="neverForLocation" />
+27-->F:\leizhenzi-c\android\app\src\main\AndroidManifest.xml:46:9-55
+28    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+28-->F:\leizhenzi-c\android\app\src\main\AndroidManifest.xml:48:5-78
+28-->F:\leizhenzi-c\android\app\src\main\AndroidManifest.xml:48:22-75
 29    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-29-->[:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-76
-29-->[:flutter_blue_plus] D:\FengquBra\build\flutter_blue_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:12:22-73
-30
-31    <application
-32        android:name="android.app.Application"
-33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-33-->[androidx.core:core:1.6.0] C:\Users\Administrator\.gradle\caches\transforms-3\479dd4bb6612b7cfbdde7fd13a3daa5e\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
-34        android:debuggable="true"
-35        android:icon="@mipmap/ic_launcher"
-36        android:label="沣趣智能文胸" >
-37        <activity
-38            android:name="com.jsfengqu.smartbra.MainActivity"
-39            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-40            android:exported="true"
-41            android:hardwareAccelerated="true"
-42            android:launchMode="singleTop"
-43            android:theme="@style/LaunchTheme"
-44            android:windowSoftInputMode="adjustResize" >
-45
-46            <!--
-47                 Specifies an Android theme to apply to this Activity as soon as
-48                 the Android process has started. This theme is visible to the user
-49                 while the Flutter UI initializes. After that, this theme continues
-50                 to determine the Window background behind the Flutter UI.
-51            -->
-52            <meta-data
-53                android:name="io.flutter.embedding.android.NormalTheme"
-54                android:resource="@style/NormalTheme" />
-55
-56            <intent-filter>
-57                <action android:name="android.intent.action.MAIN" />
-58
-59                <category android:name="android.intent.category.LAUNCHER" />
-60            </intent-filter>
-61        </activity>
-62        <!--
-63             Don't delete the meta-data below.
-64             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-65        -->
-66        <meta-data
-67            android:name="flutterEmbedding"
-68            android:value="2" />
-69
-70        <uses-library
-70-->[androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
-71            android:name="androidx.window.extensions"
-71-->[androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
-72            android:required="false" />
-72-->[androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
-73        <uses-library
-73-->[androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
-74            android:name="androidx.window.sidecar"
-74-->[androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
-75            android:required="false" />
-75-->[androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
-76    </application>
-77
-78</manifest>
+29-->F:\leizhenzi-c\android\app\src\main\AndroidManifest.xml:49:5-76
+29-->F:\leizhenzi-c\android\app\src\main\AndroidManifest.xml:49:22-73
+30    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/> -->
+30-->F:\leizhenzi-c\android\app\src\main\AndroidManifest.xml:51:5-80
+30-->F:\leizhenzi-c\android\app\src\main\AndroidManifest.xml:51:22-78
+31    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+31-->F:\leizhenzi-c\android\app\src\main\AndroidManifest.xml:53:5-78
+31-->F:\leizhenzi-c\android\app\src\main\AndroidManifest.xml:53:22-76
+32
+33    <application
+34        android:name="android.app.Application"
+35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+35-->[androidx.core:core:1.6.0] C:\Users\Administrator\.gradle\caches\transforms-3\479dd4bb6612b7cfbdde7fd13a3daa5e\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+36        android:debuggable="true"
+37        android:icon="@mipmap/ic_launcher"
+38        android:label="leizhenzi" >
+39        <activity
+40            android:name="com.dgfengqu.leizhenzi.MainActivity"
+41            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+42            android:exported="true"
+43            android:hardwareAccelerated="true"
+44            android:launchMode="singleTop"
+45            android:theme="@style/LaunchTheme"
+46            android:windowSoftInputMode="adjustResize" >
+47
+48            <!--
+49                 Specifies an Android theme to apply to this Activity as soon as
+50                 the Android process has started. This theme is visible to the user
+51                 while the Flutter UI initializes. After that, this theme continues
+52                 to determine the Window background behind the Flutter UI.
+53            -->
+54            <meta-data
+55                android:name="io.flutter.embedding.android.NormalTheme"
+56                android:resource="@style/NormalTheme" />
+57
+58            <intent-filter>
+59                <action android:name="android.intent.action.MAIN" />
+60
+61                <category android:name="android.intent.category.LAUNCHER" />
+62            </intent-filter>
+63        </activity>
+64        <!--
+65             Don't delete the meta-data below.
+66             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+67        -->
+68        <meta-data
+69            android:name="flutterEmbedding"
+70            android:value="2" />
+71
+72        <uses-library
+72-->[androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+73            android:name="androidx.window.extensions"
+73-->[androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+74            android:required="false" />
+74-->[androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+75        <uses-library
+75-->[androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+76            android:name="androidx.window.sidecar"
+76-->[androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+77            android:required="false" />
+77-->[androidx.window:window:1.0.0-beta04] C:\Users\Administrator\.gradle\caches\transforms-3\a4f902a70a0ac891a6fa068be6866446\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+78    </application>
+79
+80</manifest>

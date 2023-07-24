@@ -16599,6 +16599,836 @@ public final class Protos {
     }
   }
 
+  public interface ConnectionPriorityRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ConnectionPriorityRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string remote_id = 1;</code>
+     * @return The remoteId.
+     */
+    java.lang.String getRemoteId();
+    /**
+     * <code>string remote_id = 1;</code>
+     * @return The bytes for remoteId.
+     */
+    com.google.protobuf.ByteString
+        getRemoteIdBytes();
+
+    /**
+     * <code>int32 connectionPriority = 2;</code>
+     * @return The connectionPriority.
+     */
+    int getConnectionPriority();
+  }
+  /**
+   * Protobuf type {@code ConnectionPriorityRequest}
+   */
+  public  static final class ConnectionPriorityRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ConnectionPriorityRequest, ConnectionPriorityRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:ConnectionPriorityRequest)
+      ConnectionPriorityRequestOrBuilder {
+    private ConnectionPriorityRequest() {
+      remoteId_ = "";
+    }
+    public static final int REMOTE_ID_FIELD_NUMBER = 1;
+    private java.lang.String remoteId_;
+    /**
+     * <code>string remote_id = 1;</code>
+     * @return The remoteId.
+     */
+    @java.lang.Override
+    public java.lang.String getRemoteId() {
+      return remoteId_;
+    }
+    /**
+     * <code>string remote_id = 1;</code>
+     * @return The bytes for remoteId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRemoteIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(remoteId_);
+    }
+    /**
+     * <code>string remote_id = 1;</code>
+     * @param value The remoteId to set.
+     */
+    private void setRemoteId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      remoteId_ = value;
+    }
+    /**
+     * <code>string remote_id = 1;</code>
+     */
+    private void clearRemoteId() {
+      
+      remoteId_ = getDefaultInstance().getRemoteId();
+    }
+    /**
+     * <code>string remote_id = 1;</code>
+     * @param value The bytes for remoteId to set.
+     */
+    private void setRemoteIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      remoteId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int CONNECTIONPRIORITY_FIELD_NUMBER = 2;
+    private int connectionPriority_;
+    /**
+     * <code>int32 connectionPriority = 2;</code>
+     * @return The connectionPriority.
+     */
+    @java.lang.Override
+    public int getConnectionPriority() {
+      return connectionPriority_;
+    }
+    /**
+     * <code>int32 connectionPriority = 2;</code>
+     * @param value The connectionPriority to set.
+     */
+    private void setConnectionPriority(int value) {
+      
+      connectionPriority_ = value;
+    }
+    /**
+     * <code>int32 connectionPriority = 2;</code>
+     */
+    private void clearConnectionPriority() {
+      
+      connectionPriority_ = 0;
+    }
+
+    public static com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code ConnectionPriorityRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:ConnectionPriorityRequest)
+        com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequestOrBuilder {
+      // Construct using com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string remote_id = 1;</code>
+       * @return The remoteId.
+       */
+      @java.lang.Override
+      public java.lang.String getRemoteId() {
+        return instance.getRemoteId();
+      }
+      /**
+       * <code>string remote_id = 1;</code>
+       * @return The bytes for remoteId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRemoteIdBytes() {
+        return instance.getRemoteIdBytes();
+      }
+      /**
+       * <code>string remote_id = 1;</code>
+       * @param value The remoteId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoteId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRemoteId(value);
+        return this;
+      }
+      /**
+       * <code>string remote_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemoteId() {
+        copyOnWrite();
+        instance.clearRemoteId();
+        return this;
+      }
+      /**
+       * <code>string remote_id = 1;</code>
+       * @param value The bytes for remoteId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoteIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRemoteIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>int32 connectionPriority = 2;</code>
+       * @return The connectionPriority.
+       */
+      @java.lang.Override
+      public int getConnectionPriority() {
+        return instance.getConnectionPriority();
+      }
+      /**
+       * <code>int32 connectionPriority = 2;</code>
+       * @param value The connectionPriority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionPriority(int value) {
+        copyOnWrite();
+        instance.setConnectionPriority(value);
+        return this;
+      }
+      /**
+       * <code>int32 connectionPriority = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectionPriority() {
+        copyOnWrite();
+        instance.clearConnectionPriority();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ConnectionPriorityRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "remoteId_",
+              "connectionPriority_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0004" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:ConnectionPriorityRequest)
+    private static final com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest DEFAULT_INSTANCE;
+    static {
+      ConnectionPriorityRequest defaultInstance = new ConnectionPriorityRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ConnectionPriorityRequest.class, defaultInstance);
+    }
+
+    public static com.boskokg.flutter_blue_plus.Protos.ConnectionPriorityRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ConnectionPriorityRequest> PARSER;
+
+    public static com.google.protobuf.Parser<ConnectionPriorityRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface PreferredPhyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PreferredPhy)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string remote_id = 1;</code>
+     * @return The remoteId.
+     */
+    java.lang.String getRemoteId();
+    /**
+     * <code>string remote_id = 1;</code>
+     * @return The bytes for remoteId.
+     */
+    com.google.protobuf.ByteString
+        getRemoteIdBytes();
+
+    /**
+     * <code>uint32 txPhy = 2;</code>
+     * @return The txPhy.
+     */
+    int getTxPhy();
+
+    /**
+     * <code>uint32 rxPhy = 3;</code>
+     * @return The rxPhy.
+     */
+    int getRxPhy();
+
+    /**
+     * <code>uint32 phyOptions = 4;</code>
+     * @return The phyOptions.
+     */
+    int getPhyOptions();
+  }
+  /**
+   * Protobuf type {@code PreferredPhy}
+   */
+  public  static final class PreferredPhy extends
+      com.google.protobuf.GeneratedMessageLite<
+          PreferredPhy, PreferredPhy.Builder> implements
+      // @@protoc_insertion_point(message_implements:PreferredPhy)
+      PreferredPhyOrBuilder {
+    private PreferredPhy() {
+      remoteId_ = "";
+    }
+    public static final int REMOTE_ID_FIELD_NUMBER = 1;
+    private java.lang.String remoteId_;
+    /**
+     * <code>string remote_id = 1;</code>
+     * @return The remoteId.
+     */
+    @java.lang.Override
+    public java.lang.String getRemoteId() {
+      return remoteId_;
+    }
+    /**
+     * <code>string remote_id = 1;</code>
+     * @return The bytes for remoteId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRemoteIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(remoteId_);
+    }
+    /**
+     * <code>string remote_id = 1;</code>
+     * @param value The remoteId to set.
+     */
+    private void setRemoteId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      remoteId_ = value;
+    }
+    /**
+     * <code>string remote_id = 1;</code>
+     */
+    private void clearRemoteId() {
+      
+      remoteId_ = getDefaultInstance().getRemoteId();
+    }
+    /**
+     * <code>string remote_id = 1;</code>
+     * @param value The bytes for remoteId to set.
+     */
+    private void setRemoteIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      remoteId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int TXPHY_FIELD_NUMBER = 2;
+    private int txPhy_;
+    /**
+     * <code>uint32 txPhy = 2;</code>
+     * @return The txPhy.
+     */
+    @java.lang.Override
+    public int getTxPhy() {
+      return txPhy_;
+    }
+    /**
+     * <code>uint32 txPhy = 2;</code>
+     * @param value The txPhy to set.
+     */
+    private void setTxPhy(int value) {
+      
+      txPhy_ = value;
+    }
+    /**
+     * <code>uint32 txPhy = 2;</code>
+     */
+    private void clearTxPhy() {
+      
+      txPhy_ = 0;
+    }
+
+    public static final int RXPHY_FIELD_NUMBER = 3;
+    private int rxPhy_;
+    /**
+     * <code>uint32 rxPhy = 3;</code>
+     * @return The rxPhy.
+     */
+    @java.lang.Override
+    public int getRxPhy() {
+      return rxPhy_;
+    }
+    /**
+     * <code>uint32 rxPhy = 3;</code>
+     * @param value The rxPhy to set.
+     */
+    private void setRxPhy(int value) {
+      
+      rxPhy_ = value;
+    }
+    /**
+     * <code>uint32 rxPhy = 3;</code>
+     */
+    private void clearRxPhy() {
+      
+      rxPhy_ = 0;
+    }
+
+    public static final int PHYOPTIONS_FIELD_NUMBER = 4;
+    private int phyOptions_;
+    /**
+     * <code>uint32 phyOptions = 4;</code>
+     * @return The phyOptions.
+     */
+    @java.lang.Override
+    public int getPhyOptions() {
+      return phyOptions_;
+    }
+    /**
+     * <code>uint32 phyOptions = 4;</code>
+     * @param value The phyOptions to set.
+     */
+    private void setPhyOptions(int value) {
+      
+      phyOptions_ = value;
+    }
+    /**
+     * <code>uint32 phyOptions = 4;</code>
+     */
+    private void clearPhyOptions() {
+      
+      phyOptions_ = 0;
+    }
+
+    public static com.boskokg.flutter_blue_plus.Protos.PreferredPhy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.PreferredPhy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.PreferredPhy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.PreferredPhy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.PreferredPhy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.PreferredPhy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.PreferredPhy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.PreferredPhy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.PreferredPhy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.PreferredPhy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.PreferredPhy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.boskokg.flutter_blue_plus.Protos.PreferredPhy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.boskokg.flutter_blue_plus.Protos.PreferredPhy prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code PreferredPhy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.boskokg.flutter_blue_plus.Protos.PreferredPhy, Builder> implements
+        // @@protoc_insertion_point(builder_implements:PreferredPhy)
+        com.boskokg.flutter_blue_plus.Protos.PreferredPhyOrBuilder {
+      // Construct using com.boskokg.flutter_blue_plus.Protos.PreferredPhy.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string remote_id = 1;</code>
+       * @return The remoteId.
+       */
+      @java.lang.Override
+      public java.lang.String getRemoteId() {
+        return instance.getRemoteId();
+      }
+      /**
+       * <code>string remote_id = 1;</code>
+       * @return The bytes for remoteId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRemoteIdBytes() {
+        return instance.getRemoteIdBytes();
+      }
+      /**
+       * <code>string remote_id = 1;</code>
+       * @param value The remoteId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoteId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRemoteId(value);
+        return this;
+      }
+      /**
+       * <code>string remote_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemoteId() {
+        copyOnWrite();
+        instance.clearRemoteId();
+        return this;
+      }
+      /**
+       * <code>string remote_id = 1;</code>
+       * @param value The bytes for remoteId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoteIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRemoteIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>uint32 txPhy = 2;</code>
+       * @return The txPhy.
+       */
+      @java.lang.Override
+      public int getTxPhy() {
+        return instance.getTxPhy();
+      }
+      /**
+       * <code>uint32 txPhy = 2;</code>
+       * @param value The txPhy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTxPhy(int value) {
+        copyOnWrite();
+        instance.setTxPhy(value);
+        return this;
+      }
+      /**
+       * <code>uint32 txPhy = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTxPhy() {
+        copyOnWrite();
+        instance.clearTxPhy();
+        return this;
+      }
+
+      /**
+       * <code>uint32 rxPhy = 3;</code>
+       * @return The rxPhy.
+       */
+      @java.lang.Override
+      public int getRxPhy() {
+        return instance.getRxPhy();
+      }
+      /**
+       * <code>uint32 rxPhy = 3;</code>
+       * @param value The rxPhy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRxPhy(int value) {
+        copyOnWrite();
+        instance.setRxPhy(value);
+        return this;
+      }
+      /**
+       * <code>uint32 rxPhy = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRxPhy() {
+        copyOnWrite();
+        instance.clearRxPhy();
+        return this;
+      }
+
+      /**
+       * <code>uint32 phyOptions = 4;</code>
+       * @return The phyOptions.
+       */
+      @java.lang.Override
+      public int getPhyOptions() {
+        return instance.getPhyOptions();
+      }
+      /**
+       * <code>uint32 phyOptions = 4;</code>
+       * @param value The phyOptions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPhyOptions(int value) {
+        copyOnWrite();
+        instance.setPhyOptions(value);
+        return this;
+      }
+      /**
+       * <code>uint32 phyOptions = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPhyOptions() {
+        copyOnWrite();
+        instance.clearPhyOptions();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:PreferredPhy)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.boskokg.flutter_blue_plus.Protos.PreferredPhy();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "remoteId_",
+              "txPhy_",
+              "rxPhy_",
+              "phyOptions_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u000b" +
+                "\u0003\u000b\u0004\u000b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.boskokg.flutter_blue_plus.Protos.PreferredPhy> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.boskokg.flutter_blue_plus.Protos.PreferredPhy.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.boskokg.flutter_blue_plus.Protos.PreferredPhy>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:PreferredPhy)
+    private static final com.boskokg.flutter_blue_plus.Protos.PreferredPhy DEFAULT_INSTANCE;
+    static {
+      PreferredPhy defaultInstance = new PreferredPhy();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PreferredPhy.class, defaultInstance);
+    }
+
+    public static com.boskokg.flutter_blue_plus.Protos.PreferredPhy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PreferredPhy> PARSER;
+
+    public static com.google.protobuf.Parser<PreferredPhy> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
 
   static {
   }

@@ -1,29 +1,29 @@
 <dependencies>
   <compile
-      roots="__local_aars__:D:\FengquBra\build\app\intermediates\flutter\release\libs.jar:unspecified@jar,D:\FengquBra\android@@:permission_handler_android::release,D:\FengquBra\android@@:flutter_blue_plus::release,D:\FengquBra\android@@:fluttertoast::release,io.flutter:armeabi_v7a_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar,io.flutter:arm64_v8a_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar,io.flutter:x86_64_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar,io.flutter:flutter_embedding_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar,androidx.lifecycle:lifecycle-common-java8:2.2.0@jar,androidx.fragment:fragment:1.1.0@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.loader:loader:1.0.0@aar,androidx.activity:activity:1.0.0@aar,androidx.customview:customview:1.0.0@aar,androidx.core:core:1.6.0@aar,androidx.core:core:1.6.0@aar,androidx.lifecycle:lifecycle-runtime:2.2.0@aar,androidx.savedstate:savedstate:1.0.0@aar,androidx.lifecycle:lifecycle-livedata:2.0.0@aar,androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar,androidx.lifecycle:lifecycle-common:2.2.0@jar,androidx.arch.core:core-runtime:2.0.0@aar,androidx.arch.core:core-common:2.1.0@jar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.lifecycle:lifecycle-viewmodel:2.1.0@aar,androidx.annotation:annotation:1.2.0@jar,androidx.annotation:annotation-experimental:1.1.0@aar,androidx.tracing:tracing:1.0.0@aar,androidx.window:window-java:1.0.0-beta04@aar,androidx.window:window:1.0.0-beta04@aar,org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2@jar,org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10@jar,org.jetbrains.kotlin:kotlin-stdlib:1.6.10@jar,org.jetbrains:annotations:13.0@jar,org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10@jar">
+      roots="__local_aars__:F:\leizhenzi-c\build\app\intermediates\flutter\release\libs.jar:unspecified@jar,F:\leizhenzi-c\android@@:permission_handler_android::release,F:\leizhenzi-c\android@@:flutter_blue_plus::release,F:\leizhenzi-c\android@@:fluttertoast::release,io.flutter:armeabi_v7a_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar,io.flutter:arm64_v8a_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar,io.flutter:x86_64_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar,io.flutter:flutter_embedding_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar,androidx.lifecycle:lifecycle-common-java8:2.2.0@jar,androidx.fragment:fragment:1.1.0@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.loader:loader:1.0.0@aar,androidx.activity:activity:1.0.0@aar,androidx.customview:customview:1.0.0@aar,androidx.core:core:1.6.0@aar,androidx.core:core:1.6.0@aar,androidx.lifecycle:lifecycle-runtime:2.2.0@aar,androidx.savedstate:savedstate:1.0.0@aar,androidx.lifecycle:lifecycle-livedata:2.0.0@aar,androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar,androidx.lifecycle:lifecycle-common:2.2.0@jar,androidx.arch.core:core-runtime:2.0.0@aar,androidx.arch.core:core-common:2.1.0@jar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.lifecycle:lifecycle-viewmodel:2.1.0@aar,androidx.annotation:annotation:1.2.0@jar,androidx.annotation:annotation-experimental:1.1.0@aar,androidx.tracing:tracing:1.0.0@aar,androidx.window:window-java:1.0.0-beta04@aar,androidx.window:window:1.0.0-beta04@aar,org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2@jar,org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.0@jar,org.jetbrains.kotlin:kotlin-stdlib:1.7.0@jar,org.jetbrains.kotlin:kotlin-stdlib-common:1.7.0@jar,org.jetbrains:annotations:13.0@jar">
     <dependency
-        name="__local_aars__:D:\FengquBra\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
-        simpleName="__local_aars__:D:\FengquBra\build\app\intermediates\flutter\release\libs.jar"/>
+        name="__local_aars__:F:\leizhenzi-c\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
+        simpleName="__local_aars__:F:\leizhenzi-c\build\app\intermediates\flutter\release\libs.jar"/>
     <dependency
-        name="D:\FengquBra\android@@:permission_handler_android::release"
+        name="F:\leizhenzi-c\android@@:permission_handler_android::release"
         simpleName="com.baseflow.permissionhandler:permission_handler_android"/>
     <dependency
-        name="D:\FengquBra\android@@:flutter_blue_plus::release"
+        name="F:\leizhenzi-c\android@@:flutter_blue_plus::release"
         simpleName="com.boskokg.flutter_blue_plus:flutter_blue_plus"/>
     <dependency
-        name="D:\FengquBra\android@@:fluttertoast::release"
+        name="F:\leizhenzi-c\android@@:fluttertoast::release"
         simpleName="com.example.FlutterToast:fluttertoast"/>
     <dependency
-        name="io.flutter:armeabi_v7a_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar"
+        name="io.flutter:armeabi_v7a_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar"
         simpleName="io.flutter:armeabi_v7a_release"/>
     <dependency
-        name="io.flutter:arm64_v8a_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar"
+        name="io.flutter:arm64_v8a_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar"
         simpleName="io.flutter:arm64_v8a_release"/>
     <dependency
-        name="io.flutter:x86_64_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar"
+        name="io.flutter:x86_64_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar"
         simpleName="io.flutter:x86_64_release"/>
     <dependency
-        name="io.flutter:flutter_embedding_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar"
+        name="io.flutter:flutter_embedding_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar"
         simpleName="io.flutter:flutter_embedding_release"/>
     <dependency
         name="androidx.lifecycle:lifecycle-common-java8:2.2.0@jar"
@@ -101,43 +101,43 @@
         name="org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30@jar"
         simpleName="org.jetbrains.kotlin:kotlin-stdlib-jdk8"/>
     <dependency
-        name="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10@jar"
+        name="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.0@jar"
         simpleName="org.jetbrains.kotlin:kotlin-stdlib-jdk7"/>
     <dependency
-        name="org.jetbrains.kotlin:kotlin-stdlib:1.6.10@jar"
+        name="org.jetbrains.kotlin:kotlin-stdlib:1.7.0@jar"
         simpleName="org.jetbrains.kotlin:kotlin-stdlib"/>
+    <dependency
+        name="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.0@jar"
+        simpleName="org.jetbrains.kotlin:kotlin-stdlib-common"/>
     <dependency
         name="org.jetbrains:annotations:13.0@jar"
         simpleName="org.jetbrains:annotations"/>
-    <dependency
-        name="org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10@jar"
-        simpleName="org.jetbrains.kotlin:kotlin-stdlib-common"/>
   </compile>
   <package
-      roots="__local_aars__:D:\FengquBra\build\app\intermediates\flutter\release\libs.jar:unspecified@jar,D:\FengquBra\android@@:permission_handler_android::release,D:\FengquBra\android@@:flutter_blue_plus::release,D:\FengquBra\android@@:fluttertoast::release,io.flutter:armeabi_v7a_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar,io.flutter:arm64_v8a_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar,io.flutter:x86_64_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar,io.flutter:flutter_embedding_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar,com.google.protobuf:protobuf-javalite:3.18.0@jar,androidx.window:window-java:1.0.0-beta04@aar,androidx.window:window:1.0.0-beta04@aar,org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2@jar,org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10@jar,androidx.lifecycle:lifecycle-common-java8:2.2.0@jar,androidx.fragment:fragment:1.1.0@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.loader:loader:1.0.0@aar,androidx.activity:activity:1.0.0@aar,androidx.customview:customview:1.0.0@aar,androidx.core:core:1.6.0@aar,androidx.core:core:1.6.0@aar,androidx.lifecycle:lifecycle-runtime:2.2.0@aar,androidx.savedstate:savedstate:1.0.0@aar,androidx.lifecycle:lifecycle-livedata:2.0.0@aar,androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar,androidx.lifecycle:lifecycle-common:2.2.0@jar,androidx.tracing:tracing:1.0.0@aar,androidx.arch.core:core-runtime:2.0.0@aar,androidx.arch.core:core-common:2.1.0@jar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.lifecycle:lifecycle-viewmodel:2.1.0@aar,androidx.annotation:annotation:1.2.0@jar,org.jetbrains.kotlin:kotlin-stdlib:1.6.10@jar,androidx.annotation:annotation-experimental:1.1.0@aar,org.jetbrains:annotations:13.0@jar,org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10@jar">
+      roots="__local_aars__:F:\leizhenzi-c\build\app\intermediates\flutter\release\libs.jar:unspecified@jar,F:\leizhenzi-c\android@@:permission_handler_android::release,F:\leizhenzi-c\android@@:flutter_blue_plus::release,F:\leizhenzi-c\android@@:fluttertoast::release,io.flutter:armeabi_v7a_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar,io.flutter:arm64_v8a_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar,io.flutter:x86_64_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar,io.flutter:flutter_embedding_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar,com.google.protobuf:protobuf-javalite:3.18.0@jar,androidx.window:window-java:1.0.0-beta04@aar,androidx.window:window:1.0.0-beta04@aar,org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2@jar,org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.0@jar,androidx.lifecycle:lifecycle-common-java8:2.2.0@jar,androidx.fragment:fragment:1.1.0@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.loader:loader:1.0.0@aar,androidx.activity:activity:1.0.0@aar,androidx.customview:customview:1.0.0@aar,androidx.core:core:1.6.0@aar,androidx.core:core:1.6.0@aar,androidx.lifecycle:lifecycle-runtime:2.2.0@aar,androidx.savedstate:savedstate:1.0.0@aar,androidx.lifecycle:lifecycle-livedata:2.0.0@aar,androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar,androidx.lifecycle:lifecycle-common:2.2.0@jar,androidx.tracing:tracing:1.0.0@aar,androidx.arch.core:core-runtime:2.0.0@aar,androidx.arch.core:core-common:2.1.0@jar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.lifecycle:lifecycle-viewmodel:2.1.0@aar,androidx.annotation:annotation:1.2.0@jar,org.jetbrains.kotlin:kotlin-stdlib:1.7.0@jar,androidx.annotation:annotation-experimental:1.1.0@aar,org.jetbrains.kotlin:kotlin-stdlib-common:1.7.0@jar,org.jetbrains:annotations:13.0@jar">
     <dependency
-        name="__local_aars__:D:\FengquBra\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
-        simpleName="__local_aars__:D:\FengquBra\build\app\intermediates\flutter\release\libs.jar"/>
+        name="__local_aars__:F:\leizhenzi-c\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
+        simpleName="__local_aars__:F:\leizhenzi-c\build\app\intermediates\flutter\release\libs.jar"/>
     <dependency
-        name="D:\FengquBra\android@@:permission_handler_android::release"
+        name="F:\leizhenzi-c\android@@:permission_handler_android::release"
         simpleName="com.baseflow.permissionhandler:permission_handler_android"/>
     <dependency
-        name="D:\FengquBra\android@@:flutter_blue_plus::release"
+        name="F:\leizhenzi-c\android@@:flutter_blue_plus::release"
         simpleName="com.boskokg.flutter_blue_plus:flutter_blue_plus"/>
     <dependency
-        name="D:\FengquBra\android@@:fluttertoast::release"
+        name="F:\leizhenzi-c\android@@:fluttertoast::release"
         simpleName="com.example.FlutterToast:fluttertoast"/>
     <dependency
-        name="io.flutter:armeabi_v7a_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar"
+        name="io.flutter:armeabi_v7a_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar"
         simpleName="io.flutter:armeabi_v7a_release"/>
     <dependency
-        name="io.flutter:arm64_v8a_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar"
+        name="io.flutter:arm64_v8a_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar"
         simpleName="io.flutter:arm64_v8a_release"/>
     <dependency
-        name="io.flutter:x86_64_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar"
+        name="io.flutter:x86_64_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar"
         simpleName="io.flutter:x86_64_release"/>
     <dependency
-        name="io.flutter:flutter_embedding_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar"
+        name="io.flutter:flutter_embedding_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar"
         simpleName="io.flutter:flutter_embedding_release"/>
     <dependency
         name="com.google.protobuf:protobuf-javalite:3.18.0@jar"
@@ -158,7 +158,7 @@
         name="org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30@jar"
         simpleName="org.jetbrains.kotlin:kotlin-stdlib-jdk8"/>
     <dependency
-        name="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10@jar"
+        name="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.0@jar"
         simpleName="org.jetbrains.kotlin:kotlin-stdlib-jdk7"/>
     <dependency
         name="androidx.lifecycle:lifecycle-common-java8:2.2.0@jar"
@@ -218,16 +218,16 @@
         name="androidx.annotation:annotation:1.2.0@jar"
         simpleName="androidx.annotation:annotation"/>
     <dependency
-        name="org.jetbrains.kotlin:kotlin-stdlib:1.6.10@jar"
+        name="org.jetbrains.kotlin:kotlin-stdlib:1.7.0@jar"
         simpleName="org.jetbrains.kotlin:kotlin-stdlib"/>
     <dependency
         name="androidx.annotation:annotation-experimental:1.1.0@aar"
         simpleName="androidx.annotation:annotation-experimental"/>
     <dependency
+        name="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.0@jar"
+        simpleName="org.jetbrains.kotlin:kotlin-stdlib-common"/>
+    <dependency
         name="org.jetbrains:annotations:13.0@jar"
         simpleName="org.jetbrains:annotations"/>
-    <dependency
-        name="org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10@jar"
-        simpleName="org.jetbrains.kotlin:kotlin-stdlib-common"/>
   </package>
 </dependencies>

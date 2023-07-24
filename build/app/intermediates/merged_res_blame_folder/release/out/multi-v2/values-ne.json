@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.jsfengqu.smartbra.app-mergeReleaseResources-9:/values-ne/values-ne.xml",
+            "outputFile": "com.dgfengqu.leizhenzi.app-mergeReleaseResources-9:/values-ne/values-ne.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-3\\479dd4bb6612b7cfbdde7fd13a3daa5e\\transformed\\core-1.6.0\\res\\values-ne\\values-ne.xml",

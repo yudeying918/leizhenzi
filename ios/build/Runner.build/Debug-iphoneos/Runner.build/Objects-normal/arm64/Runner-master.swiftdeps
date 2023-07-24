@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)"
+options: "cb839c32b83e3dfe3fa584817f20ce28f5211ceb9b7e96f1cc819bcb6cb8e048"
+build_start_time: [1681111973, 502182000]
+build_end_time: [1681111976, 302588000]
+inputs:
+  "/Users/ydy/Desktop/FengquBra/ios/Runner/AppDelegate.swift": !private [1660837585, 0]

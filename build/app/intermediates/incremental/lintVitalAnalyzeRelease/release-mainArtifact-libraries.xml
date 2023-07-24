@@ -1,13 +1,13 @@
 <libraries>
   <library
-      name="__local_aars__:D:\FengquBra\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
-      jars="D:\FengquBra\build\app\intermediates\flutter\release\libs.jar"
-      resolved="__local_aars__:D:\FengquBra\build\app\intermediates\flutter\release\libs.jar:unspecified"/>
+      name="__local_aars__:F:\leizhenzi-c\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
+      jars="F:\leizhenzi-c\build\app\intermediates\flutter\release\libs.jar"
+      resolved="__local_aars__:F:\leizhenzi-c\build\app\intermediates\flutter\release\libs.jar:unspecified"/>
   <library
-      name="D:\FengquBra\android@@:permission_handler_android::release"
-      jars="D:\FengquBra\build\permission_handler_android\.transforms\149da4c6fc6db22b4bb48cfbfe118c9e\transformed\out\jars\classes.jar;D:\FengquBra\build\permission_handler_android\.transforms\149da4c6fc6db22b4bb48cfbfe118c9e\transformed\out\jars\libs\R.jar"
+      name="F:\leizhenzi-c\android@@:permission_handler_android::release"
+      jars="F:\leizhenzi-c\build\permission_handler_android\.transforms\1490b993c6b78f9e4e8495b1dd74039a\transformed\out\jars\classes.jar;F:\leizhenzi-c\build\permission_handler_android\.transforms\1490b993c6b78f9e4e8495b1dd74039a\transformed\out\jars\libs\R.jar"
       resolved="com.baseflow.permissionhandler:permission_handler_android:unspecified"
-      folder="D:\FengquBra\build\permission_handler_android\.transforms\149da4c6fc6db22b4bb48cfbfe118c9e\transformed\out"
+      folder="F:\leizhenzi-c\build\permission_handler_android\.transforms\1490b993c6b78f9e4e8495b1dd74039a\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -17,10 +17,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="D:\FengquBra\android@@:flutter_blue_plus::release"
-      jars="D:\FengquBra\build\flutter_blue_plus\.transforms\51ea20d983687de7433ca9fcdab8aed2\transformed\out\jars\classes.jar;D:\FengquBra\build\flutter_blue_plus\.transforms\51ea20d983687de7433ca9fcdab8aed2\transformed\out\jars\libs\R.jar"
+      name="F:\leizhenzi-c\android@@:flutter_blue_plus::release"
+      jars="F:\leizhenzi-c\build\flutter_blue_plus\.transforms\25c1bfb87a6be4afa253c745ba052d2c\transformed\out\jars\classes.jar;F:\leizhenzi-c\build\flutter_blue_plus\.transforms\25c1bfb87a6be4afa253c745ba052d2c\transformed\out\jars\libs\R.jar"
       resolved="com.boskokg.flutter_blue_plus:flutter_blue_plus:unspecified"
-      folder="D:\FengquBra\build\flutter_blue_plus\.transforms\51ea20d983687de7433ca9fcdab8aed2\transformed\out"
+      folder="F:\leizhenzi-c\build\flutter_blue_plus\.transforms\25c1bfb87a6be4afa253c745ba052d2c\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -30,10 +30,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="D:\FengquBra\android@@:fluttertoast::release"
-      jars="D:\FengquBra\build\fluttertoast\.transforms\80d2236b8aca446f63b30503ec55ac22\transformed\out\jars\classes.jar;D:\FengquBra\build\fluttertoast\.transforms\80d2236b8aca446f63b30503ec55ac22\transformed\out\jars\libs\R.jar"
+      name="F:\leizhenzi-c\android@@:fluttertoast::release"
+      jars="F:\leizhenzi-c\build\fluttertoast\.transforms\1c0d42a5437c461851a2574865197e74\transformed\out\jars\classes.jar;F:\leizhenzi-c\build\fluttertoast\.transforms\1c0d42a5437c461851a2574865197e74\transformed\out\jars\libs\R.jar"
       resolved="com.example.FlutterToast:fluttertoast:unspecified"
-      folder="D:\FengquBra\build\fluttertoast\.transforms\80d2236b8aca446f63b30503ec55ac22\transformed\out"
+      folder="F:\leizhenzi-c\build\fluttertoast\.transforms\1c0d42a5437c461851a2574865197e74\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -43,21 +43,21 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="io.flutter:armeabi_v7a_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar"
-      jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.flutter\armeabi_v7a_release\1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6\820fd77b9cf0640896129482b6280640df476312\armeabi_v7a_release-1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6.jar"
-      resolved="io.flutter:armeabi_v7a_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6"/>
+      name="io.flutter:armeabi_v7a_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar"
+      jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.flutter\armeabi_v7a_release\1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420\c9f7bcf2d86a2218089a99fca3de3669a1e03924\armeabi_v7a_release-1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420.jar"
+      resolved="io.flutter:armeabi_v7a_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420"/>
   <library
-      name="io.flutter:arm64_v8a_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar"
-      jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.flutter\arm64_v8a_release\1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6\dbce6a29580a9aa2eea1f144d3a4ec636590186f\arm64_v8a_release-1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6.jar"
-      resolved="io.flutter:arm64_v8a_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6"/>
+      name="io.flutter:arm64_v8a_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar"
+      jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.flutter\arm64_v8a_release\1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420\a17dc953f5084a8f2b87d93e3ae01b763fe881ec\arm64_v8a_release-1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420.jar"
+      resolved="io.flutter:arm64_v8a_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420"/>
   <library
-      name="io.flutter:x86_64_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar"
-      jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.flutter\x86_64_release\1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6\4fcf676a4785c7b01807ffffd4240ebcf744031b\x86_64_release-1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6.jar"
-      resolved="io.flutter:x86_64_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6"/>
+      name="io.flutter:x86_64_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar"
+      jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.flutter\x86_64_release\1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420\44d8c79838c2a07cc302163f4665756a8c412a3c\x86_64_release-1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420.jar"
+      resolved="io.flutter:x86_64_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420"/>
   <library
-      name="io.flutter:flutter_embedding_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6@jar"
-      jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.flutter\flutter_embedding_release\1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6\e439a0aad1d9f1d03a6e75b57d735a1c318b5d72\flutter_embedding_release-1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6.jar"
-      resolved="io.flutter:flutter_embedding_release:1.0.0-0f359063c487ee70787e58b4b011cbb3c2f53fd6"/>
+      name="io.flutter:flutter_embedding_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420@jar"
+      jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.flutter\flutter_embedding_release\1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420\791cf6662213614ac515b13bbd2083cf60dcf61e\flutter_embedding_release-1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420.jar"
+      resolved="io.flutter:flutter_embedding_release:1.0.0-45f6e009110df4f34ec2cf99f63cf73b71b7a420"/>
   <library
       name="androidx.lifecycle:lifecycle-common-java8:2.2.0@jar"
       jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\androidx.lifecycle\lifecycle-common-java8\2.2.0\cd3478503da69b1a7e0319bd2d1389943db9b364\lifecycle-common-java8-2.2.0.jar"
@@ -312,21 +312,21 @@
       jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk8\1.5.30\5fd47535cc85f9e24996f939c2de6583991481b0\kotlin-stdlib-jdk8-1.5.30.jar"
       resolved="org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30"/>
   <library
-      name="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10@jar"
-      jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\1.6.10\e1c380673654a089c4f0c9f83d0ddfdc1efdb498\kotlin-stdlib-jdk7-1.6.10.jar"
-      resolved="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10"/>
+      name="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.0@jar"
+      jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\1.7.0\fbeaa8fa63cbab09c547083a449097be6660a9a\kotlin-stdlib-jdk7-1.7.0.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.0"/>
   <library
-      name="org.jetbrains.kotlin:kotlin-stdlib:1.6.10@jar"
-      jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.6.10\b8af3fe6f1ca88526914929add63cf5e7c5049af\kotlin-stdlib-1.6.10.jar"
-      resolved="org.jetbrains.kotlin:kotlin-stdlib:1.6.10"/>
+      name="org.jetbrains.kotlin:kotlin-stdlib:1.7.0@jar"
+      jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.7.0\a5f42c684ad9003160ef0d0f693ecf0ba7b13549\kotlin-stdlib-1.7.0.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib:1.7.0"/>
+  <library
+      name="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.0@jar"
+      jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-common\1.7.0\51736992f422993a1e741051bdf3c12801bc1ca1\kotlin-stdlib-common-1.7.0.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.0"/>
   <library
       name="org.jetbrains:annotations:13.0@jar"
       jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar"
       resolved="org.jetbrains:annotations:13.0"/>
-  <library
-      name="org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10@jar"
-      jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-common\1.6.10\c118700e3a33c8a0d9adc920e9dec0831171925\kotlin-stdlib-common-1.6.10.jar"
-      resolved="org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10"/>
   <library
       name="com.google.protobuf:protobuf-javalite:3.18.0@jar"
       jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.protobuf\protobuf-javalite\3.18.0\64c4b01f6db9e66dcce7ce320f8fdc21eda757c7\protobuf-javalite-3.18.0.jar"

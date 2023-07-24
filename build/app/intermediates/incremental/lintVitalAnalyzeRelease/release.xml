@@ -1,11 +1,11 @@
 <variant
     name="release"
-    package="com.jsfengqu.smartbra"
-    minSdkVersion="19"
+    package="com.dgfengqu.leizhenzi"
+    minSdkVersion="21"
     targetSdkVersion="33"
-    mergedManifest="D:\FengquBra\build\app\intermediates\merged_manifest\release\AndroidManifest.xml"
-    proguardFiles="D:\FengquBra\build\app\intermediates\default_proguard_files\global\proguard-android.txt-7.4.1;E:\flutter\packages\flutter_tools\gradle\flutter_proguard_rules.pro;proguard-rules.pro"
-    partialResultsDir="D:\FengquBra\build\app\intermediates\lint_vital_partial_results\release\out"
+    mergedManifest="F:\leizhenzi-c\build\app\intermediates\merged_manifest\release\AndroidManifest.xml"
+    proguardFiles="F:\leizhenzi-c\build\app\intermediates\default_proguard_files\global\proguard-android.txt-7.4.1;E:\flutter\packages\flutter_tools\gradle\flutter_proguard_rules.pro;proguard-rules.pro"
+    partialResultsDir="F:\leizhenzi-c\build\app\intermediates\lint_vital_partial_results\release\out"
     desugaredMethodsFiles="C:\Users\Administrator\.gradle\caches\transforms-3\9e3dc29af6d1e98a1fb21a7e6972cb93\transformed\D8BackportedDesugaredMethods.txt">
   <buildFeatures
       namespacing="REQUIRED"/>
@@ -31,9 +31,9 @@
         value="android.app.Application" />
   </manifestPlaceholders>
   <mainArtifact
-      classOutputs="D:\FengquBra\build\app\intermediates\javac\release\classes;D:\FengquBra\build\app\intermediates\compile_and_runtime_not_namespaced_r_class_jar\release\R.jar"
-      applicationId="com.jsfengqu.smartbra"
-      generatedSourceFolders="D:\FengquBra\build\app\generated\ap_generated_sources\release\out;D:\FengquBra\build\app\generated\aidl_source_output_dir\release\out;D:\FengquBra\build\app\generated\source\buildConfig\release;D:\FengquBra\build\app\generated\renderscript_source_output_dir\release\out"
-      generatedResourceFolders="D:\FengquBra\build\app\generated\res\rs\release;D:\FengquBra\build\app\generated\res\resValues\release">
+      classOutputs="F:\leizhenzi-c\build\app\intermediates\javac\release\classes;F:\leizhenzi-c\build\app\intermediates\compile_and_runtime_not_namespaced_r_class_jar\release\R.jar"
+      applicationId="com.dgfengqu.leizhenzi"
+      generatedSourceFolders="F:\leizhenzi-c\build\app\generated\ap_generated_sources\release\out;F:\leizhenzi-c\build\app\generated\aidl_source_output_dir\release\out;F:\leizhenzi-c\build\app\generated\source\buildConfig\release;F:\leizhenzi-c\build\app\generated\renderscript_source_output_dir\release\out"
+      generatedResourceFolders="F:\leizhenzi-c\build\app\generated\res\rs\release;F:\leizhenzi-c\build\app\generated\res\resValues\release">
   </mainArtifact>
 </variant>

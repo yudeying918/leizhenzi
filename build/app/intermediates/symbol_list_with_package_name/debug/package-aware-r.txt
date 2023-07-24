@@ -1,4 +1,4 @@
-com.jsfengqu.smartbra
+com.dgfengqu.leizhenzi
 attr activityAction
 attr activityName
 attr alpha

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.jsfengqu.smartbra.app-mergeReleaseResources-9:/values/values.xml",
+            "outputFile": "com.dgfengqu.leizhenzi.app-mergeReleaseResources-9:/values/values.xml",
             "map": [
                 {
-                    "source": "D:\\FengquBra\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "F:\\leizhenzi-c\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

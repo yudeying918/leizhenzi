@@ -1,0 +1,26 @@
+Target dependency graph (8 targets)
+Flutter in Pods, no dependencies
+Protobuf in Pods, no dependencies
+Toast in Pods, no dependencies
+flutter_blue_plus in Pods, depends on:
+Flutter in Pods (explicit)
+Protobuf in Pods (explicit)
+fluttertoast in Pods, depends on:
+Flutter in Pods (explicit)
+Toast in Pods (explicit)
+permission_handler_apple in Pods, depends on:
+Flutter in Pods (explicit)
+Pods-Runner in Pods, depends on:
+Flutter in Pods (explicit)
+Protobuf in Pods (explicit)
+Toast in Pods (explicit)
+flutter_blue_plus in Pods (explicit)
+fluttertoast in Pods (explicit)
+permission_handler_apple in Pods (explicit)
+Runner in Runner, depends on:
+Pods-Runner in Pods (implicit dependency via file 'Pods_Runner.framework' in build phase 'Link Binary')
+Protobuf in Pods (implicit dependency via options '-framework Protobuf' in build setting 'OTHER_LDFLAGS')
+Toast in Pods (implicit dependency via options '-framework Toast' in build setting 'OTHER_LDFLAGS')
+flutter_blue_plus in Pods (implicit dependency via options '-framework flutter_blue_plus' in build setting 'OTHER_LDFLAGS')
+fluttertoast in Pods (implicit dependency via options '-framework fluttertoast' in build setting 'OTHER_LDFLAGS')
+permission_handler_apple in Pods (implicit dependency via options '-framework permission_handler_apple' in build setting 'OTHER_LDFLAGS')
